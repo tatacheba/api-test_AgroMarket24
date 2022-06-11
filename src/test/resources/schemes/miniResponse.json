@@ -1,0 +1,3830 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+    "code",
+    "name",
+    "description",
+    "expirationTime",
+    "net",
+    "totalPriceWithTax",
+    "totalPrice",
+    "totalTax",
+    "subTotal",
+    "subTotalWithoutQuoteDiscounts",
+    "deliveryCost",
+    "entries",
+    "totalItems",
+    "deliveryMode",
+    "deliveryAddress",
+    "paymentInfo",
+    "appliedOrderPromotions",
+    "appliedProductPromotions",
+    "productDiscounts",
+    "orderDiscounts",
+    "quoteDiscounts",
+    "quoteDiscountsRate",
+    "quoteDiscountsType",
+    "totalDiscounts",
+    "totalDiscountsWithQuoteDiscounts",
+    "subTotalWithDiscounts",
+    "site",
+    "store",
+    "guid",
+    "calculated",
+    "appliedVouchers",
+    "user",
+    "pickupOrderGroups",
+    "deliveryOrderGroups",
+    "pickupItemsQuantity",
+    "deliveryItemsQuantity",
+    "totalUnitCount",
+    "comments",
+    "rootGroups",
+    "potentialOrderPromotions",
+    "potentialProductPromotions",
+    "saveTime",
+    "savedBy",
+    "quoteData",
+    "importStatus",
+    "costCenter",
+    "paymentType",
+    "purchaseOrderNumber",
+    "b2BComment",
+    "b2bCustomerData",
+    "quoteAllowed"
+  ],
+  "properties": {
+    "code": {
+      "type": "string",
+      "default": "",
+      "title": "The code Schema",
+      "examples": [
+        "00128000"
+      ]
+    },
+    "name": {
+      "type": "null",
+      "default": null,
+      "title": "The name Schema",
+      "examples": [
+        null
+      ]
+    },
+    "description": {
+      "type": "null",
+      "default": null,
+      "title": "The description Schema",
+      "examples": [
+        null
+      ]
+    },
+    "expirationTime": {
+      "type": "null",
+      "default": null,
+      "title": "The expirationTime Schema",
+      "examples": [
+        null
+      ]
+    },
+    "net": {
+      "type": "boolean",
+      "default": false,
+      "title": "The net Schema",
+      "examples": [
+        false
+      ]
+    },
+    "totalPriceWithTax": {
+      "type": "object",
+      "default": {},
+      "title": "The totalPriceWithTax Schema",
+      "required": [
+        "currencyIso",
+        "value",
+        "priceType",
+        "formattedValue",
+        "minQuantity",
+        "maxQuantity"
+      ],
+      "properties": {
+        "currencyIso": {
+          "type": "string",
+          "default": "",
+          "title": "The currencyIso Schema",
+          "examples": [
+            "RUB"
+          ]
+        },
+        "value": {
+          "type": "integer",
+          "default": 0,
+          "title": "The value Schema",
+          "examples": [
+            6090
+          ]
+        },
+        "priceType": {
+          "type": "string",
+          "default": "",
+          "title": "The priceType Schema",
+          "examples": [
+            "BUY"
+          ]
+        },
+        "formattedValue": {
+          "type": "string",
+          "default": "",
+          "title": "The formattedValue Schema",
+          "examples": [
+            "6 090,00 ₽"
+          ]
+        },
+        "minQuantity": {
+          "type": "null",
+          "default": null,
+          "title": "The minQuantity Schema",
+          "examples": [
+            null
+          ]
+        },
+        "maxQuantity": {
+          "type": "null",
+          "default": null,
+          "title": "The maxQuantity Schema",
+          "examples": [
+            null
+          ]
+        }
+      },
+      "examples": [{
+        "currencyIso": "RUB",
+        "value": 6090,
+        "priceType": "BUY",
+        "formattedValue": "6 090,00 ₽",
+        "minQuantity": null,
+        "maxQuantity": null
+      }]
+    },
+    "totalPrice": {
+      "type": "object",
+      "default": {},
+      "title": "The totalPrice Schema",
+      "required": [
+        "currencyIso",
+        "value",
+        "priceType",
+        "formattedValue",
+        "minQuantity",
+        "maxQuantity"
+      ],
+      "properties": {
+        "currencyIso": {
+          "type": "string",
+          "default": "",
+          "title": "The currencyIso Schema",
+          "examples": [
+            "RUB"
+          ]
+        },
+        "value": {
+          "type": "integer",
+          "default": 0,
+          "title": "The value Schema",
+          "examples": [
+            6090
+          ]
+        },
+        "priceType": {
+          "type": "string",
+          "default": "",
+          "title": "The priceType Schema",
+          "examples": [
+            "BUY"
+          ]
+        },
+        "formattedValue": {
+          "type": "string",
+          "default": "",
+          "title": "The formattedValue Schema",
+          "examples": [
+            "6 090,00 ₽"
+          ]
+        },
+        "minQuantity": {
+          "type": "null",
+          "default": null,
+          "title": "The minQuantity Schema",
+          "examples": [
+            null
+          ]
+        },
+        "maxQuantity": {
+          "type": "null",
+          "default": null,
+          "title": "The maxQuantity Schema",
+          "examples": [
+            null
+          ]
+        }
+      },
+      "examples": [{
+        "currencyIso": "RUB",
+        "value": 6090,
+        "priceType": "BUY",
+        "formattedValue": "6 090,00 ₽",
+        "minQuantity": null,
+        "maxQuantity": null
+      }]
+    },
+    "totalTax": {
+      "type": "object",
+      "default": {},
+      "title": "The totalTax Schema",
+      "required": [
+        "currencyIso",
+        "value",
+        "priceType",
+        "formattedValue",
+        "minQuantity",
+        "maxQuantity"
+      ],
+      "properties": {
+        "currencyIso": {
+          "type": "string",
+          "default": "",
+          "title": "The currencyIso Schema",
+          "examples": [
+            "RUB"
+          ]
+        },
+        "value": {
+          "type": "integer",
+          "default": 0,
+          "title": "The value Schema",
+          "examples": [
+            0
+          ]
+        },
+        "priceType": {
+          "type": "string",
+          "default": "",
+          "title": "The priceType Schema",
+          "examples": [
+            "BUY"
+          ]
+        },
+        "formattedValue": {
+          "type": "string",
+          "default": "",
+          "title": "The formattedValue Schema",
+          "examples": [
+            "0,00 ₽"
+          ]
+        },
+        "minQuantity": {
+          "type": "null",
+          "default": null,
+          "title": "The minQuantity Schema",
+          "examples": [
+            null
+          ]
+        },
+        "maxQuantity": {
+          "type": "null",
+          "default": null,
+          "title": "The maxQuantity Schema",
+          "examples": [
+            null
+          ]
+        }
+      },
+      "examples": [{
+        "currencyIso": "RUB",
+        "value": 0,
+        "priceType": "BUY",
+        "formattedValue": "0,00 ₽",
+        "minQuantity": null,
+        "maxQuantity": null
+      }]
+    },
+    "subTotal": {
+      "type": "object",
+      "default": {},
+      "title": "The subTotal Schema",
+      "required": [
+        "currencyIso",
+        "value",
+        "priceType",
+        "formattedValue",
+        "minQuantity",
+        "maxQuantity"
+      ],
+      "properties": {
+        "currencyIso": {
+          "type": "string",
+          "default": "",
+          "title": "The currencyIso Schema",
+          "examples": [
+            "RUB"
+          ]
+        },
+        "value": {
+          "type": "integer",
+          "default": 0,
+          "title": "The value Schema",
+          "examples": [
+            6090
+          ]
+        },
+        "priceType": {
+          "type": "string",
+          "default": "",
+          "title": "The priceType Schema",
+          "examples": [
+            "BUY"
+          ]
+        },
+        "formattedValue": {
+          "type": "string",
+          "default": "",
+          "title": "The formattedValue Schema",
+          "examples": [
+            "6 090,00 ₽"
+          ]
+        },
+        "minQuantity": {
+          "type": "null",
+          "default": null,
+          "title": "The minQuantity Schema",
+          "examples": [
+            null
+          ]
+        },
+        "maxQuantity": {
+          "type": "null",
+          "default": null,
+          "title": "The maxQuantity Schema",
+          "examples": [
+            null
+          ]
+        }
+      },
+      "examples": [{
+        "currencyIso": "RUB",
+        "value": 6090,
+        "priceType": "BUY",
+        "formattedValue": "6 090,00 ₽",
+        "minQuantity": null,
+        "maxQuantity": null
+      }]
+    },
+    "subTotalWithoutQuoteDiscounts": {
+      "type": "object",
+      "default": {},
+      "title": "The subTotalWithoutQuoteDiscounts Schema",
+      "required": [
+        "currencyIso",
+        "value",
+        "priceType",
+        "formattedValue",
+        "minQuantity",
+        "maxQuantity"
+      ],
+      "properties": {
+        "currencyIso": {
+          "type": "string",
+          "default": "",
+          "title": "The currencyIso Schema",
+          "examples": [
+            "RUB"
+          ]
+        },
+        "value": {
+          "type": "integer",
+          "default": 0,
+          "title": "The value Schema",
+          "examples": [
+            6090
+          ]
+        },
+        "priceType": {
+          "type": "string",
+          "default": "",
+          "title": "The priceType Schema",
+          "examples": [
+            "BUY"
+          ]
+        },
+        "formattedValue": {
+          "type": "string",
+          "default": "",
+          "title": "The formattedValue Schema",
+          "examples": [
+            "6 090,00 ₽"
+          ]
+        },
+        "minQuantity": {
+          "type": "null",
+          "default": null,
+          "title": "The minQuantity Schema",
+          "examples": [
+            null
+          ]
+        },
+        "maxQuantity": {
+          "type": "null",
+          "default": null,
+          "title": "The maxQuantity Schema",
+          "examples": [
+            null
+          ]
+        }
+      },
+      "examples": [{
+        "currencyIso": "RUB",
+        "value": 6090,
+        "priceType": "BUY",
+        "formattedValue": "6 090,00 ₽",
+        "minQuantity": null,
+        "maxQuantity": null
+      }]
+    },
+    "deliveryCost": {
+      "type": "null",
+      "default": null,
+      "title": "The deliveryCost Schema",
+      "examples": [
+        null
+      ]
+    },
+    "entries": {
+      "type": "array",
+      "default": [],
+      "title": "The entries Schema",
+      "items": {
+        "type": "object",
+        "default": {},
+        "title": "A Schema",
+        "required": [
+          "entryNumber",
+          "quantity",
+          "basePrice",
+          "totalPrice",
+          "product",
+          "updateable",
+          "deliveryMode",
+          "deliveryPointOfService",
+          "entries",
+          "configurationInfos",
+          "statusSummaryMap",
+          "entryGroupNumbers",
+          "comments",
+          "supportedActions",
+          "pos"
+        ],
+        "properties": {
+          "entryNumber": {
+            "type": "integer",
+            "default": 0,
+            "title": "The entryNumber Schema",
+            "examples": [
+              0
+            ]
+          },
+          "quantity": {
+            "type": "integer",
+            "default": 0,
+            "title": "The quantity Schema",
+            "examples": [
+              1
+            ]
+          },
+          "basePrice": {
+            "type": "object",
+            "default": {},
+            "title": "The basePrice Schema",
+            "required": [
+              "currencyIso",
+              "value",
+              "priceType",
+              "formattedValue",
+              "minQuantity",
+              "maxQuantity"
+            ],
+            "properties": {
+              "currencyIso": {
+                "type": "string",
+                "default": "",
+                "title": "The currencyIso Schema",
+                "examples": [
+                  "RUB"
+                ]
+              },
+              "value": {
+                "type": "integer",
+                "default": 0,
+                "title": "The value Schema",
+                "examples": [
+                  6090
+                ]
+              },
+              "priceType": {
+                "type": "string",
+                "default": "",
+                "title": "The priceType Schema",
+                "examples": [
+                  "BUY"
+                ]
+              },
+              "formattedValue": {
+                "type": "string",
+                "default": "",
+                "title": "The formattedValue Schema",
+                "examples": [
+                  "6 090,00 ₽"
+                ]
+              },
+              "minQuantity": {
+                "type": "null",
+                "default": null,
+                "title": "The minQuantity Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "maxQuantity": {
+                "type": "null",
+                "default": null,
+                "title": "The maxQuantity Schema",
+                "examples": [
+                  null
+                ]
+              }
+            },
+            "examples": [{
+              "currencyIso": "RUB",
+              "value": 6090,
+              "priceType": "BUY",
+              "formattedValue": "6 090,00 ₽",
+              "minQuantity": null,
+              "maxQuantity": null
+            }]
+          },
+          "totalPrice": {
+            "type": "object",
+            "default": {},
+            "title": "The totalPrice Schema",
+            "required": [
+              "currencyIso",
+              "value",
+              "priceType",
+              "formattedValue",
+              "minQuantity",
+              "maxQuantity"
+            ],
+            "properties": {
+              "currencyIso": {
+                "type": "string",
+                "default": "",
+                "title": "The currencyIso Schema",
+                "examples": [
+                  "RUB"
+                ]
+              },
+              "value": {
+                "type": "integer",
+                "default": 0,
+                "title": "The value Schema",
+                "examples": [
+                  6090
+                ]
+              },
+              "priceType": {
+                "type": "string",
+                "default": "",
+                "title": "The priceType Schema",
+                "examples": [
+                  "BUY"
+                ]
+              },
+              "formattedValue": {
+                "type": "string",
+                "default": "",
+                "title": "The formattedValue Schema",
+                "examples": [
+                  "6 090,00 ₽"
+                ]
+              },
+              "minQuantity": {
+                "type": "null",
+                "default": null,
+                "title": "The minQuantity Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "maxQuantity": {
+                "type": "null",
+                "default": null,
+                "title": "The maxQuantity Schema",
+                "examples": [
+                  null
+                ]
+              }
+            },
+            "examples": [{
+              "currencyIso": "RUB",
+              "value": 6090,
+              "priceType": "BUY",
+              "formattedValue": "6 090,00 ₽",
+              "minQuantity": null,
+              "maxQuantity": null
+            }]
+          },
+          "product": {
+            "type": "object",
+            "default": {},
+            "title": "The product Schema",
+            "required": [
+              "code",
+              "name",
+              "url",
+              "description",
+              "purchasable",
+              "stock",
+              "futureStocks",
+              "availableForPickup",
+              "averageRating",
+              "numberOfReviews",
+              "summary",
+              "manufacturer",
+              "variantType",
+              "price",
+              "baseProduct",
+              "images",
+              "categories",
+              "reviews",
+              "classifications",
+              "potentialPromotions",
+              "variantOptions",
+              "baseOptions",
+              "volumePricesFlag",
+              "volumePrices",
+              "productReferences",
+              "variantMatrix",
+              "priceRange",
+              "firstCategoryNameList",
+              "multidimensional",
+              "configurable",
+              "configuratorType",
+              "addToCartDisabled",
+              "addToCartDisabledMessage",
+              "tags",
+              "keywords",
+              "ratingSummary",
+              "genders",
+              "shields",
+              "manufacturerTypeDescription",
+              "description2",
+              "marketplaceName",
+              "familyMasterSeasonCode",
+              "familySalesCategorySegment3"
+            ],
+            "properties": {
+              "code": {
+                "type": "string",
+                "default": "",
+                "title": "The code Schema",
+                "examples": [
+                  "T431455"
+                ]
+              },
+              "name": {
+                "type": "string",
+                "default": "",
+                "title": "The name Schema",
+                "examples": [
+                  "185/65 R 15 92H XL Nokian Hakka Green 3"
+                ]
+              },
+              "url": {
+                "type": "string",
+                "default": "",
+                "title": "The url Schema",
+                "examples": [
+                  "/products/p/T431455"
+                ]
+              },
+              "description": {
+                "type": "null",
+                "default": null,
+                "title": "The description Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "purchasable": {
+                "type": "boolean",
+                "default": false,
+                "title": "The purchasable Schema",
+                "examples": [
+                  true
+                ]
+              },
+              "stock": {
+                "type": "object",
+                "default": {},
+                "title": "The stock Schema",
+                "required": [
+                  "stockLevelStatus",
+                  "stockLevel",
+                  "stockThreshold"
+                ],
+                "properties": {
+                  "stockLevelStatus": {
+                    "type": "object",
+                    "default": {},
+                    "title": "The stockLevelStatus Schema",
+                    "required": [
+                      "code",
+                      "type"
+                    ],
+                    "properties": {
+                      "code": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The code Schema",
+                        "examples": [
+                          "inStock"
+                        ]
+                      },
+                      "type": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The type Schema",
+                        "examples": [
+                          "StockLevelStatus"
+                        ]
+                      }
+                    },
+                    "examples": [{
+                      "code": "inStock",
+                      "type": "StockLevelStatus"
+                    }]
+                  },
+                  "stockLevel": {
+                    "type": "integer",
+                    "default": 0,
+                    "title": "The stockLevel Schema",
+                    "examples": [
+                      0
+                    ]
+                  },
+                  "stockThreshold": {
+                    "type": "null",
+                    "default": null,
+                    "title": "The stockThreshold Schema",
+                    "examples": [
+                      null
+                    ]
+                  }
+                },
+                "examples": [{
+                  "stockLevelStatus": {
+                    "code": "inStock",
+                    "type": "StockLevelStatus"
+                  },
+                  "stockLevel": 0,
+                  "stockThreshold": null
+                }]
+              },
+              "futureStocks": {
+                "type": "null",
+                "default": null,
+                "title": "The futureStocks Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "availableForPickup": {
+                "type": "boolean",
+                "default": false,
+                "title": "The availableForPickup Schema",
+                "examples": [
+                  false
+                ]
+              },
+              "averageRating": {
+                "type": "null",
+                "default": null,
+                "title": "The averageRating Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "numberOfReviews": {
+                "type": "null",
+                "default": null,
+                "title": "The numberOfReviews Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "summary": {
+                "type": "null",
+                "default": null,
+                "title": "The summary Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "manufacturer": {
+                "type": "string",
+                "default": "",
+                "title": "The manufacturer Schema",
+                "examples": [
+                  "NOKIAN TYRES"
+                ]
+              },
+              "variantType": {
+                "type": "null",
+                "default": null,
+                "title": "The variantType Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "price": {
+                "type": "null",
+                "default": null,
+                "title": "The price Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "baseProduct": {
+                "type": "string",
+                "default": "",
+                "title": "The baseProduct Schema",
+                "examples": [
+                  "IF1381"
+                ]
+              },
+              "images": {
+                "type": "array",
+                "default": [],
+                "title": "The images Schema",
+                "items": {
+                  "type": "object",
+                  "title": "A Schema",
+                  "required": [
+                    "imageType",
+                    "format",
+                    "url",
+                    "altText",
+                    "galleryIndex",
+                    "width"
+                  ],
+                  "properties": {
+                    "imageType": {
+                      "type": "string",
+                      "title": "The imageType Schema",
+                      "examples": [
+                        "PRIMARY"
+                      ]
+                    },
+                    "format": {
+                      "type": "string",
+                      "title": "The format Schema",
+                      "examples": [
+                        "primary",
+                        "small",
+                        "mini"
+                      ]
+                    },
+                    "url": {
+                      "type": "string",
+                      "title": "The url Schema",
+                      "examples": [
+                        "/medias/NOKIAN-HAKKA-GREEN-3-PICTURE-HIGH-PProductPageTyreImage-zoom-Rotated?context=bWFzdGVyfHJvb3R8MjcwODQ0fGltYWdlL3BuZ3xoNjcvaGQwLzExODUxNTY0Mzg0Mjg2LnBuZ3w3MzgwMThkMWIxYTE1NmJjOWU4MWM1ZjVjZjk2ZThjY2NiNzA1N2ZmNmU5ZjkxNWJiNGJiMWQwMWQwY2Q0MjBm",
+                        "/medias/NOKIAN-HAKKA-GREEN-3-PICTURE-HIGH-ProductCardSmall?context=bWFzdGVyfHJvb3R8MTc2NzF8aW1hZ2UvcG5nfGhhOC9oNTgvMTE4NTE1NjUxMzc5NTAucG5nfDE5MDMwODY0Y2E1M2JjMmFjZjcxNjhjOGU0YmQ2MWM5YjVjNGMwOWFkZDU5NjU0NzhiMDU4YTE3OGMwMTM3ODk",
+                        "/medias/NOKIAN-HAKKA-GREEN-3-PICTURE-HIGH-CartTyreImage?context=bWFzdGVyfHJvb3R8MzY5NXxpbWFnZS9wbmd8aGZhL2gwNi8xMTg1MTU2MzQ5OTU1MC5wbmd8ZGJlN2NiZDE0NzBlYTk1MzVkYzdjZWI0YTgxM2E3MjIyYzIzYmM5NWRiOGI4OGUwMDYxMzJlMTIzZTJlZGYzMg"
+                      ]
+                    },
+                    "altText": {
+                      "type": "string",
+                      "title": "The altText Schema",
+                      "examples": [
+                        "185/65 R 15 92H XL Nokian Hakka Green 3"
+                      ]
+                    },
+                    "galleryIndex": {
+                      "type": "null",
+                      "title": "The galleryIndex Schema",
+                      "examples": [
+                        null
+                      ]
+                    },
+                    "width": {
+                      "type": "null",
+                      "title": "The width Schema",
+                      "examples": [
+                        null
+                      ]
+                    }
+                  },
+                  "examples": [{
+                    "imageType": "PRIMARY",
+                    "format": "primary",
+                    "url": "/medias/NOKIAN-HAKKA-GREEN-3-PICTURE-HIGH-PProductPageTyreImage-zoom-Rotated?context=bWFzdGVyfHJvb3R8MjcwODQ0fGltYWdlL3BuZ3xoNjcvaGQwLzExODUxNTY0Mzg0Mjg2LnBuZ3w3MzgwMThkMWIxYTE1NmJjOWU4MWM1ZjVjZjk2ZThjY2NiNzA1N2ZmNmU5ZjkxNWJiNGJiMWQwMWQwY2Q0MjBm",
+                    "altText": "185/65 R 15 92H XL Nokian Hakka Green 3",
+                    "galleryIndex": null,
+                    "width": null
+                  },
+                    {
+                      "imageType": "PRIMARY",
+                      "format": "small",
+                      "url": "/medias/NOKIAN-HAKKA-GREEN-3-PICTURE-HIGH-ProductCardSmall?context=bWFzdGVyfHJvb3R8MTc2NzF8aW1hZ2UvcG5nfGhhOC9oNTgvMTE4NTE1NjUxMzc5NTAucG5nfDE5MDMwODY0Y2E1M2JjMmFjZjcxNjhjOGU0YmQ2MWM5YjVjNGMwOWFkZDU5NjU0NzhiMDU4YTE3OGMwMTM3ODk",
+                      "altText": "185/65 R 15 92H XL Nokian Hakka Green 3",
+                      "galleryIndex": null,
+                      "width": null
+                    },
+                    {
+                      "imageType": "PRIMARY",
+                      "format": "mini",
+                      "url": "/medias/NOKIAN-HAKKA-GREEN-3-PICTURE-HIGH-CartTyreImage?context=bWFzdGVyfHJvb3R8MzY5NXxpbWFnZS9wbmd8aGZhL2gwNi8xMTg1MTU2MzQ5OTU1MC5wbmd8ZGJlN2NiZDE0NzBlYTk1MzVkYzdjZWI0YTgxM2E3MjIyYzIzYmM5NWRiOGI4OGUwMDYxMzJlMTIzZTJlZGYzMg",
+                      "altText": "185/65 R 15 92H XL Nokian Hakka Green 3",
+                      "galleryIndex": null,
+                      "width": null
+                    }]
+                },
+                "examples": [
+                  [{
+                    "imageType": "PRIMARY",
+                    "format": "primary",
+                    "url": "/medias/NOKIAN-HAKKA-GREEN-3-PICTURE-HIGH-PProductPageTyreImage-zoom-Rotated?context=bWFzdGVyfHJvb3R8MjcwODQ0fGltYWdlL3BuZ3xoNjcvaGQwLzExODUxNTY0Mzg0Mjg2LnBuZ3w3MzgwMThkMWIxYTE1NmJjOWU4MWM1ZjVjZjk2ZThjY2NiNzA1N2ZmNmU5ZjkxNWJiNGJiMWQwMWQwY2Q0MjBm",
+                    "altText": "185/65 R 15 92H XL Nokian Hakka Green 3",
+                    "galleryIndex": null,
+                    "width": null
+                  },
+                    {
+                      "imageType": "PRIMARY",
+                      "format": "small",
+                      "url": "/medias/NOKIAN-HAKKA-GREEN-3-PICTURE-HIGH-ProductCardSmall?context=bWFzdGVyfHJvb3R8MTc2NzF8aW1hZ2UvcG5nfGhhOC9oNTgvMTE4NTE1NjUxMzc5NTAucG5nfDE5MDMwODY0Y2E1M2JjMmFjZjcxNjhjOGU0YmQ2MWM5YjVjNGMwOWFkZDU5NjU0NzhiMDU4YTE3OGMwMTM3ODk",
+                      "altText": "185/65 R 15 92H XL Nokian Hakka Green 3",
+                      "galleryIndex": null,
+                      "width": null
+                    },
+                    {
+                      "imageType": "PRIMARY",
+                      "format": "mini",
+                      "url": "/medias/NOKIAN-HAKKA-GREEN-3-PICTURE-HIGH-CartTyreImage?context=bWFzdGVyfHJvb3R8MzY5NXxpbWFnZS9wbmd8aGZhL2gwNi8xMTg1MTU2MzQ5OTU1MC5wbmd8ZGJlN2NiZDE0NzBlYTk1MzVkYzdjZWI0YTgxM2E3MjIyYzIzYmM5NWRiOGI4OGUwMDYxMzJlMTIzZTJlZGYzMg",
+                      "altText": "185/65 R 15 92H XL Nokian Hakka Green 3",
+                      "galleryIndex": null,
+                      "width": null
+                    }]
+                ]
+              },
+              "categories": {
+                "type": "array",
+                "default": [],
+                "title": "The categories Schema",
+                "items": {
+                  "type": "object",
+                  "title": "A Schema",
+                  "required": [
+                    "code",
+                    "name",
+                    "url",
+                    "description",
+                    "image",
+                    "parentCategoryName",
+                    "sequence"
+                  ],
+                  "properties": {
+                    "code": {
+                      "type": "string",
+                      "title": "The code Schema",
+                      "examples": [
+                        "NT_Width_185.0",
+                        "NT_Ratio_65",
+                        "NT_Rim_15.0"
+                      ]
+                    },
+                    "name": {
+                      "type": "string",
+                      "title": "The name Schema",
+                      "examples": [
+                        "185.0",
+                        "65",
+                        "15.0"
+                      ]
+                    },
+                    "url": {
+                      "type": "string",
+                      "title": "The url Schema",
+                      "examples": [
+                        "/Width/185-0/c/NT_Width_185.0",
+                        "/Ratio/65/c/NT_Ratio_65",
+                        "/Rim/15-0/c/NT_Rim_15.0"
+                      ]
+                    },
+                    "description": {
+                      "type": "null",
+                      "title": "The description Schema",
+                      "examples": [
+                        null
+                      ]
+                    },
+                    "image": {
+                      "type": "null",
+                      "title": "The image Schema",
+                      "examples": [
+                        null
+                      ]
+                    },
+                    "parentCategoryName": {
+                      "type": "string",
+                      "title": "The parentCategoryName Schema",
+                      "examples": [
+                        "Width",
+                        "Ratio",
+                        "Rim"
+                      ]
+                    },
+                    "sequence": {
+                      "type": "integer",
+                      "title": "The sequence Schema",
+                      "examples": [
+                        185001,
+                        65002,
+                        15003
+                      ]
+                    }
+                  },
+                  "examples": [{
+                    "code": "NT_Width_185.0",
+                    "name": "185.0",
+                    "url": "/Width/185-0/c/NT_Width_185.0",
+                    "description": null,
+                    "image": null,
+                    "parentCategoryName": "Width",
+                    "sequence": 185001
+                  },
+                    {
+                      "code": "NT_Ratio_65",
+                      "name": "65",
+                      "url": "/Ratio/65/c/NT_Ratio_65",
+                      "description": null,
+                      "image": null,
+                      "parentCategoryName": "Ratio",
+                      "sequence": 65002
+                    },
+                    {
+                      "code": "NT_Rim_15.0",
+                      "name": "15.0",
+                      "url": "/Rim/15-0/c/NT_Rim_15.0",
+                      "description": null,
+                      "image": null,
+                      "parentCategoryName": "Rim",
+                      "sequence": 15003
+                    }]
+                },
+                "examples": [
+                  [{
+                    "code": "NT_Width_185.0",
+                    "name": "185.0",
+                    "url": "/Width/185-0/c/NT_Width_185.0",
+                    "description": null,
+                    "image": null,
+                    "parentCategoryName": "Width",
+                    "sequence": 185001
+                  },
+                    {
+                      "code": "NT_Ratio_65",
+                      "name": "65",
+                      "url": "/Ratio/65/c/NT_Ratio_65",
+                      "description": null,
+                      "image": null,
+                      "parentCategoryName": "Ratio",
+                      "sequence": 65002
+                    },
+                    {
+                      "code": "NT_Rim_15.0",
+                      "name": "15.0",
+                      "url": "/Rim/15-0/c/NT_Rim_15.0",
+                      "description": null,
+                      "image": null,
+                      "parentCategoryName": "Rim",
+                      "sequence": 15003
+                    }]
+                ]
+              },
+              "reviews": {
+                "type": "null",
+                "default": null,
+                "title": "The reviews Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "classifications": {
+                "type": "null",
+                "default": null,
+                "title": "The classifications Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "potentialPromotions": {
+                "type": "null",
+                "default": null,
+                "title": "The potentialPromotions Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "variantOptions": {
+                "type": "null",
+                "default": null,
+                "title": "The variantOptions Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "baseOptions": {
+                "type": "array",
+                "default": [],
+                "title": "The baseOptions Schema",
+                "items": {
+                  "type": "object",
+                  "default": {},
+                  "title": "A Schema",
+                  "required": [
+                    "variantType",
+                    "options",
+                    "selected"
+                  ],
+                  "properties": {
+                    "variantType": {
+                      "type": "string",
+                      "default": "",
+                      "title": "The variantType Schema",
+                      "examples": [
+                        "TyreVariantProduct"
+                      ]
+                    },
+                    "options": {
+                      "type": "null",
+                      "default": null,
+                      "title": "The options Schema",
+                      "examples": [
+                        null
+                      ]
+                    },
+                    "selected": {
+                      "type": "object",
+                      "default": {},
+                      "title": "The selected Schema",
+                      "required": [
+                        "code",
+                        "stock",
+                        "url",
+                        "priceData",
+                        "variantOptionQualifiers"
+                      ],
+                      "properties": {
+                        "code": {
+                          "type": "string",
+                          "default": "",
+                          "title": "The code Schema",
+                          "examples": [
+                            "T431455"
+                          ]
+                        },
+                        "stock": {
+                          "type": "object",
+                          "default": {},
+                          "title": "The stock Schema",
+                          "required": [
+                            "stockLevelStatus",
+                            "stockLevel",
+                            "stockThreshold"
+                          ],
+                          "properties": {
+                            "stockLevelStatus": {
+                              "type": "object",
+                              "default": {},
+                              "title": "The stockLevelStatus Schema",
+                              "required": [
+                                "code",
+                                "type"
+                              ],
+                              "properties": {
+                                "code": {
+                                  "type": "string",
+                                  "default": "",
+                                  "title": "The code Schema",
+                                  "examples": [
+                                    "inStock"
+                                  ]
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "default": "",
+                                  "title": "The type Schema",
+                                  "examples": [
+                                    "StockLevelStatus"
+                                  ]
+                                }
+                              },
+                              "examples": [{
+                                "code": "inStock",
+                                "type": "StockLevelStatus"
+                              }]
+                            },
+                            "stockLevel": {
+                              "type": "integer",
+                              "default": 0,
+                              "title": "The stockLevel Schema",
+                              "examples": [
+                                0
+                              ]
+                            },
+                            "stockThreshold": {
+                              "type": "null",
+                              "default": null,
+                              "title": "The stockThreshold Schema",
+                              "examples": [
+                                null
+                              ]
+                            }
+                          },
+                          "examples": [{
+                            "stockLevelStatus": {
+                              "code": "inStock",
+                              "type": "StockLevelStatus"
+                            },
+                            "stockLevel": 0,
+                            "stockThreshold": null
+                          }]
+                        },
+                        "url": {
+                          "type": "string",
+                          "default": "",
+                          "title": "The url Schema",
+                          "examples": [
+                            "/products/p/T431455"
+                          ]
+                        },
+                        "priceData": {
+                          "type": "object",
+                          "default": {},
+                          "title": "The priceData Schema",
+                          "required": [
+                            "currencyIso",
+                            "value",
+                            "priceType",
+                            "formattedValue",
+                            "minQuantity",
+                            "maxQuantity"
+                          ],
+                          "properties": {
+                            "currencyIso": {
+                              "type": "string",
+                              "default": "",
+                              "title": "The currencyIso Schema",
+                              "examples": [
+                                "RUB"
+                              ]
+                            },
+                            "value": {
+                              "type": "integer",
+                              "default": 0,
+                              "title": "The value Schema",
+                              "examples": [
+                                5900
+                              ]
+                            },
+                            "priceType": {
+                              "type": "string",
+                              "default": "",
+                              "title": "The priceType Schema",
+                              "examples": [
+                                "BUY"
+                              ]
+                            },
+                            "formattedValue": {
+                              "type": "string",
+                              "default": "",
+                              "title": "The formattedValue Schema",
+                              "examples": [
+                                "5 900,00 ₽"
+                              ]
+                            },
+                            "minQuantity": {
+                              "type": "null",
+                              "default": null,
+                              "title": "The minQuantity Schema",
+                              "examples": [
+                                null
+                              ]
+                            },
+                            "maxQuantity": {
+                              "type": "null",
+                              "default": null,
+                              "title": "The maxQuantity Schema",
+                              "examples": [
+                                null
+                              ]
+                            }
+                          },
+                          "examples": [{
+                            "currencyIso": "RUB",
+                            "value": 5900,
+                            "priceType": "BUY",
+                            "formattedValue": "5 900,00 ₽",
+                            "minQuantity": null,
+                            "maxQuantity": null
+                          }]
+                        },
+                        "variantOptionQualifiers": {
+                          "type": "array",
+                          "default": [],
+                          "title": "The variantOptionQualifiers Schema",
+                          "items": {
+                            "type": "object",
+                            "title": "A Schema",
+                            "required": [
+                              "qualifier",
+                              "name",
+                              "value",
+                              "image"
+                            ],
+                            "properties": {
+                              "qualifier": {
+                                "type": "string",
+                                "title": "The qualifier Schema",
+                                "examples": [
+                                  "width",
+                                  "ratio",
+                                  "rim"
+                                ]
+                              },
+                              "name": {
+                                "type": "string",
+                                "title": "The name Schema",
+                                "examples": [
+                                  "Ширина",
+                                  "Высота профиля",
+                                  "Диаметр"
+                                ]
+                              },
+                              "value": {
+                                "type": "string",
+                                "title": "The value Schema",
+                                "examples": [
+                                  "185.0",
+                                  "65",
+                                  "15.0"
+                                ]
+                              },
+                              "image": {
+                                "type": "null",
+                                "title": "The image Schema",
+                                "examples": [
+                                  null
+                                ]
+                              }
+                            },
+                            "examples": [{
+                              "qualifier": "width",
+                              "name": "Ширина",
+                              "value": "185.0",
+                              "image": null
+                            },
+                              {
+                                "qualifier": "ratio",
+                                "name": "Высота профиля",
+                                "value": "65",
+                                "image": null
+                              },
+                              {
+                                "qualifier": "rim",
+                                "name": "Диаметр",
+                                "value": "15.0",
+                                "image": null
+                              }]
+                          },
+                          "examples": [
+                            [{
+                              "qualifier": "width",
+                              "name": "Ширина",
+                              "value": "185.0",
+                              "image": null
+                            },
+                              {
+                                "qualifier": "ratio",
+                                "name": "Высота профиля",
+                                "value": "65",
+                                "image": null
+                              },
+                              {
+                                "qualifier": "rim",
+                                "name": "Диаметр",
+                                "value": "15.0",
+                                "image": null
+                              }]
+                          ]
+                        }
+                      },
+                      "examples": [{
+                        "code": "T431455",
+                        "stock": {
+                          "stockLevelStatus": {
+                            "code": "inStock",
+                            "type": "StockLevelStatus"
+                          },
+                          "stockLevel": 0,
+                          "stockThreshold": null
+                        },
+                        "url": "/products/p/T431455",
+                        "priceData": {
+                          "currencyIso": "RUB",
+                          "value": 5900,
+                          "priceType": "BUY",
+                          "formattedValue": "5 900,00 ₽",
+                          "minQuantity": null,
+                          "maxQuantity": null
+                        },
+                        "variantOptionQualifiers": [{
+                          "qualifier": "width",
+                          "name": "Ширина",
+                          "value": "185.0",
+                          "image": null
+                        },
+                          {
+                            "qualifier": "ratio",
+                            "name": "Высота профиля",
+                            "value": "65",
+                            "image": null
+                          },
+                          {
+                            "qualifier": "rim",
+                            "name": "Диаметр",
+                            "value": "15.0",
+                            "image": null
+                          }]
+                      }]
+                    }
+                  },
+                  "examples": [{
+                    "variantType": "TyreVariantProduct",
+                    "options": null,
+                    "selected": {
+                      "code": "T431455",
+                      "stock": {
+                        "stockLevelStatus": {
+                          "code": "inStock",
+                          "type": "StockLevelStatus"
+                        },
+                        "stockLevel": 0,
+                        "stockThreshold": null
+                      },
+                      "url": "/products/p/T431455",
+                      "priceData": {
+                        "currencyIso": "RUB",
+                        "value": 5900,
+                        "priceType": "BUY",
+                        "formattedValue": "5 900,00 ₽",
+                        "minQuantity": null,
+                        "maxQuantity": null
+                      },
+                      "variantOptionQualifiers": [{
+                        "qualifier": "width",
+                        "name": "Ширина",
+                        "value": "185.0",
+                        "image": null
+                      },
+                        {
+                          "qualifier": "ratio",
+                          "name": "Высота профиля",
+                          "value": "65",
+                          "image": null
+                        },
+                        {
+                          "qualifier": "rim",
+                          "name": "Диаметр",
+                          "value": "15.0",
+                          "image": null
+                        }]
+                    }
+                  }]
+                },
+                "examples": [
+                  [{
+                    "variantType": "TyreVariantProduct",
+                    "options": null,
+                    "selected": {
+                      "code": "T431455",
+                      "stock": {
+                        "stockLevelStatus": {
+                          "code": "inStock",
+                          "type": "StockLevelStatus"
+                        },
+                        "stockLevel": 0,
+                        "stockThreshold": null
+                      },
+                      "url": "/products/p/T431455",
+                      "priceData": {
+                        "currencyIso": "RUB",
+                        "value": 5900,
+                        "priceType": "BUY",
+                        "formattedValue": "5 900,00 ₽",
+                        "minQuantity": null,
+                        "maxQuantity": null
+                      },
+                      "variantOptionQualifiers": [{
+                        "qualifier": "width",
+                        "name": "Ширина",
+                        "value": "185.0",
+                        "image": null
+                      },
+                        {
+                          "qualifier": "ratio",
+                          "name": "Высота профиля",
+                          "value": "65",
+                          "image": null
+                        },
+                        {
+                          "qualifier": "rim",
+                          "name": "Диаметр",
+                          "value": "15.0",
+                          "image": null
+                        }]
+                    }
+                  }]
+                ]
+              },
+              "volumePricesFlag": {
+                "type": "null",
+                "default": null,
+                "title": "The volumePricesFlag Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "volumePrices": {
+                "type": "null",
+                "default": null,
+                "title": "The volumePrices Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "productReferences": {
+                "type": "null",
+                "default": null,
+                "title": "The productReferences Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "variantMatrix": {
+                "type": "null",
+                "default": null,
+                "title": "The variantMatrix Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "priceRange": {
+                "type": "null",
+                "default": null,
+                "title": "The priceRange Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "firstCategoryNameList": {
+                "type": "null",
+                "default": null,
+                "title": "The firstCategoryNameList Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "multidimensional": {
+                "type": "null",
+                "default": null,
+                "title": "The multidimensional Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "configurable": {
+                "type": "boolean",
+                "default": false,
+                "title": "The configurable Schema",
+                "examples": [
+                  false
+                ]
+              },
+              "configuratorType": {
+                "type": "null",
+                "default": null,
+                "title": "The configuratorType Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "addToCartDisabled": {
+                "type": "null",
+                "default": null,
+                "title": "The addToCartDisabled Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "addToCartDisabledMessage": {
+                "type": "null",
+                "default": null,
+                "title": "The addToCartDisabledMessage Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "tags": {
+                "type": "null",
+                "default": null,
+                "title": "The tags Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "keywords": {
+                "type": "null",
+                "default": null,
+                "title": "The keywords Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "ratingSummary": {
+                "type": "null",
+                "default": null,
+                "title": "The ratingSummary Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "genders": {
+                "type": "null",
+                "default": null,
+                "title": "The genders Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "shields": {
+                "type": "null",
+                "default": null,
+                "title": "The shields Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "manufacturerTypeDescription": {
+                "type": "string",
+                "default": "",
+                "title": "The manufacturerTypeDescription Schema",
+                "examples": [
+                  "Nokian Hakka Green 3"
+                ]
+              },
+              "description2": {
+                "type": "string",
+                "default": "",
+                "title": "The description2 Schema",
+                "examples": [
+                  "185/65 R 15 92H XL"
+                ]
+              },
+              "marketplaceName": {
+                "type": "string",
+                "default": "",
+                "title": "The marketplaceName Schema",
+                "examples": [
+                  "185/65 R 15 92H XL Nokian Hakka Green 3"
+                ]
+              },
+              "familyMasterSeasonCode": {
+                "type": "string",
+                "default": "",
+                "title": "The familyMasterSeasonCode Schema",
+                "examples": [
+                  "Summer"
+                ]
+              },
+              "familySalesCategorySegment3": {
+                "type": "string",
+                "default": "",
+                "title": "The familySalesCategorySegment3 Schema",
+                "examples": [
+                  "Car Radial summer"
+                ]
+              }
+            },
+            "examples": [{
+              "code": "T431455",
+              "name": "185/65 R 15 92H XL Nokian Hakka Green 3",
+              "url": "/products/p/T431455",
+              "description": null,
+              "purchasable": true,
+              "stock": {
+                "stockLevelStatus": {
+                  "code": "inStock",
+                  "type": "StockLevelStatus"
+                },
+                "stockLevel": 0,
+                "stockThreshold": null
+              },
+              "futureStocks": null,
+              "availableForPickup": false,
+              "averageRating": null,
+              "numberOfReviews": null,
+              "summary": null,
+              "manufacturer": "NOKIAN TYRES",
+              "variantType": null,
+              "price": null,
+              "baseProduct": "IF1381",
+              "images": [{
+                "imageType": "PRIMARY",
+                "format": "primary",
+                "url": "/medias/NOKIAN-HAKKA-GREEN-3-PICTURE-HIGH-PProductPageTyreImage-zoom-Rotated?context=bWFzdGVyfHJvb3R8MjcwODQ0fGltYWdlL3BuZ3xoNjcvaGQwLzExODUxNTY0Mzg0Mjg2LnBuZ3w3MzgwMThkMWIxYTE1NmJjOWU4MWM1ZjVjZjk2ZThjY2NiNzA1N2ZmNmU5ZjkxNWJiNGJiMWQwMWQwY2Q0MjBm",
+                "altText": "185/65 R 15 92H XL Nokian Hakka Green 3",
+                "galleryIndex": null,
+                "width": null
+              },
+                {
+                  "imageType": "PRIMARY",
+                  "format": "small",
+                  "url": "/medias/NOKIAN-HAKKA-GREEN-3-PICTURE-HIGH-ProductCardSmall?context=bWFzdGVyfHJvb3R8MTc2NzF8aW1hZ2UvcG5nfGhhOC9oNTgvMTE4NTE1NjUxMzc5NTAucG5nfDE5MDMwODY0Y2E1M2JjMmFjZjcxNjhjOGU0YmQ2MWM5YjVjNGMwOWFkZDU5NjU0NzhiMDU4YTE3OGMwMTM3ODk",
+                  "altText": "185/65 R 15 92H XL Nokian Hakka Green 3",
+                  "galleryIndex": null,
+                  "width": null
+                },
+                {
+                  "imageType": "PRIMARY",
+                  "format": "mini",
+                  "url": "/medias/NOKIAN-HAKKA-GREEN-3-PICTURE-HIGH-CartTyreImage?context=bWFzdGVyfHJvb3R8MzY5NXxpbWFnZS9wbmd8aGZhL2gwNi8xMTg1MTU2MzQ5OTU1MC5wbmd8ZGJlN2NiZDE0NzBlYTk1MzVkYzdjZWI0YTgxM2E3MjIyYzIzYmM5NWRiOGI4OGUwMDYxMzJlMTIzZTJlZGYzMg",
+                  "altText": "185/65 R 15 92H XL Nokian Hakka Green 3",
+                  "galleryIndex": null,
+                  "width": null
+                }],
+              "categories": [{
+                "code": "NT_Width_185.0",
+                "name": "185.0",
+                "url": "/Width/185-0/c/NT_Width_185.0",
+                "description": null,
+                "image": null,
+                "parentCategoryName": "Width",
+                "sequence": 185001
+              },
+                {
+                  "code": "NT_Ratio_65",
+                  "name": "65",
+                  "url": "/Ratio/65/c/NT_Ratio_65",
+                  "description": null,
+                  "image": null,
+                  "parentCategoryName": "Ratio",
+                  "sequence": 65002
+                },
+                {
+                  "code": "NT_Rim_15.0",
+                  "name": "15.0",
+                  "url": "/Rim/15-0/c/NT_Rim_15.0",
+                  "description": null,
+                  "image": null,
+                  "parentCategoryName": "Rim",
+                  "sequence": 15003
+                }],
+              "reviews": null,
+              "classifications": null,
+              "potentialPromotions": null,
+              "variantOptions": null,
+              "baseOptions": [{
+                "variantType": "TyreVariantProduct",
+                "options": null,
+                "selected": {
+                  "code": "T431455",
+                  "stock": {
+                    "stockLevelStatus": {
+                      "code": "inStock",
+                      "type": "StockLevelStatus"
+                    },
+                    "stockLevel": 0,
+                    "stockThreshold": null
+                  },
+                  "url": "/products/p/T431455",
+                  "priceData": {
+                    "currencyIso": "RUB",
+                    "value": 5900,
+                    "priceType": "BUY",
+                    "formattedValue": "5 900,00 ₽",
+                    "minQuantity": null,
+                    "maxQuantity": null
+                  },
+                  "variantOptionQualifiers": [{
+                    "qualifier": "width",
+                    "name": "Ширина",
+                    "value": "185.0",
+                    "image": null
+                  },
+                    {
+                      "qualifier": "ratio",
+                      "name": "Высота профиля",
+                      "value": "65",
+                      "image": null
+                    },
+                    {
+                      "qualifier": "rim",
+                      "name": "Диаметр",
+                      "value": "15.0",
+                      "image": null
+                    }]
+                }
+              }],
+              "volumePricesFlag": null,
+              "volumePrices": null,
+              "productReferences": null,
+              "variantMatrix": null,
+              "priceRange": null,
+              "firstCategoryNameList": null,
+              "multidimensional": null,
+              "configurable": false,
+              "configuratorType": null,
+              "addToCartDisabled": null,
+              "addToCartDisabledMessage": null,
+              "tags": null,
+              "keywords": null,
+              "ratingSummary": null,
+              "genders": null,
+              "shields": null,
+              "manufacturerTypeDescription": "Nokian Hakka Green 3",
+              "description2": "185/65 R 15 92H XL",
+              "marketplaceName": "185/65 R 15 92H XL Nokian Hakka Green 3",
+              "familyMasterSeasonCode": "Summer",
+              "familySalesCategorySegment3": "Car Radial summer"
+            }]
+          },
+          "updateable": {
+            "type": "boolean",
+            "default": false,
+            "title": "The updateable Schema",
+            "examples": [
+              true
+            ]
+          },
+          "deliveryMode": {
+            "type": "null",
+            "default": null,
+            "title": "The deliveryMode Schema",
+            "examples": [
+              null
+            ]
+          },
+          "deliveryPointOfService": {
+            "type": "null",
+            "default": null,
+            "title": "The deliveryPointOfService Schema",
+            "examples": [
+              null
+            ]
+          },
+          "entries": {
+            "type": "null",
+            "default": null,
+            "title": "The entries Schema",
+            "examples": [
+              null
+            ]
+          },
+          "configurationInfos": {
+            "type": "array",
+            "default": [],
+            "title": "The configurationInfos Schema",
+            "items": {},
+            "examples": [
+              []
+            ]
+          },
+          "statusSummaryMap": {
+            "type": "object",
+            "default": {},
+            "title": "The statusSummaryMap Schema",
+            "required": [],
+            "properties": {},
+            "examples": [{}]
+          },
+          "entryGroupNumbers": {
+            "type": "array",
+            "default": [],
+            "title": "The entryGroupNumbers Schema",
+            "items": {},
+            "examples": [
+              []
+            ]
+          },
+          "comments": {
+            "type": "array",
+            "default": [],
+            "title": "The comments Schema",
+            "items": {},
+            "examples": [
+              []
+            ]
+          },
+          "supportedActions": {
+            "type": "array",
+            "default": [],
+            "title": "The supportedActions Schema",
+            "items": {
+              "type": "string",
+              "default": "",
+              "title": "A Schema",
+              "examples": [
+                "REMOVE"
+              ]
+            },
+            "examples": [
+              [
+                "REMOVE"]
+            ]
+          },
+          "pos": {
+            "type": "object",
+            "default": {},
+            "title": "The pos Schema",
+            "required": [
+              "id",
+              "name",
+              "address",
+              "warehouseCode",
+              "leadTime",
+              "inStock",
+              "stock",
+              "storeContent",
+              "drivingInstructions"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "default": "",
+                "title": "The id Schema",
+                "examples": [
+                  "SF+0015I000005pyzDQAQ"
+                ]
+              },
+              "name": {
+                "type": "string",
+                "default": "",
+                "title": "The name Schema",
+                "examples": [
+                  "ШинСервис"
+                ]
+              },
+              "address": {
+                "type": "object",
+                "default": {},
+                "title": "The address Schema",
+                "required": [
+                  "id",
+                  "title",
+                  "titleCode",
+                  "firstName",
+                  "lastName",
+                  "companyName",
+                  "line1",
+                  "line2",
+                  "town",
+                  "region",
+                  "district",
+                  "postalCode",
+                  "phone",
+                  "cellphone",
+                  "email",
+                  "country",
+                  "shippingAddress",
+                  "billingAddress",
+                  "defaultAddress",
+                  "visibleInAddressBook",
+                  "formattedAddress",
+                  "editable",
+                  "streetname",
+                  "remarks"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The id Schema",
+                    "examples": [
+                      "8797513941015"
+                    ]
+                  },
+                  "title": {
+                    "type": "null",
+                    "default": null,
+                    "title": "The title Schema",
+                    "examples": [
+                      null
+                    ]
+                  },
+                  "titleCode": {
+                    "type": "null",
+                    "default": null,
+                    "title": "The titleCode Schema",
+                    "examples": [
+                      null
+                    ]
+                  },
+                  "firstName": {
+                    "type": "null",
+                    "default": null,
+                    "title": "The firstName Schema",
+                    "examples": [
+                      null
+                    ]
+                  },
+                  "lastName": {
+                    "type": "null",
+                    "default": null,
+                    "title": "The lastName Schema",
+                    "examples": [
+                      null
+                    ]
+                  },
+                  "companyName": {
+                    "type": "null",
+                    "default": null,
+                    "title": "The companyName Schema",
+                    "examples": [
+                      null
+                    ]
+                  },
+                  "line1": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The line1 Schema",
+                    "examples": [
+                      "ш. Симферопольское, 42-й км"
+                    ]
+                  },
+                  "line2": {
+                    "type": "null",
+                    "default": null,
+                    "title": "The line2 Schema",
+                    "examples": [
+                      null
+                    ]
+                  },
+                  "town": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The town Schema",
+                    "examples": [
+                      "д. Бережки"
+                    ]
+                  },
+                  "region": {
+                    "type": "object",
+                    "default": {},
+                    "title": "The region Schema",
+                    "required": [
+                      "isocode",
+                      "isocodeShort",
+                      "countryIso",
+                      "name"
+                    ],
+                    "properties": {
+                      "isocode": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The isocode Schema",
+                        "examples": [
+                          "RU-MOS"
+                        ]
+                      },
+                      "isocodeShort": {
+                        "type": "null",
+                        "default": null,
+                        "title": "The isocodeShort Schema",
+                        "examples": [
+                          null
+                        ]
+                      },
+                      "countryIso": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The countryIso Schema",
+                        "examples": [
+                          "RU"
+                        ]
+                      },
+                      "name": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The name Schema",
+                        "examples": [
+                          "Moskovskaja oblast'"
+                        ]
+                      }
+                    },
+                    "examples": [{
+                      "isocode": "RU-MOS",
+                      "isocodeShort": null,
+                      "countryIso": "RU",
+                      "name": "Moskovskaja oblast'"
+                    }]
+                  },
+                  "district": {
+                    "type": "null",
+                    "default": null,
+                    "title": "The district Schema",
+                    "examples": [
+                      null
+                    ]
+                  },
+                  "postalCode": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The postalCode Schema",
+                    "examples": [
+                      "142132"
+                    ]
+                  },
+                  "phone": {
+                    "type": "null",
+                    "default": null,
+                    "title": "The phone Schema",
+                    "examples": [
+                      null
+                    ]
+                  },
+                  "cellphone": {
+                    "type": "null",
+                    "default": null,
+                    "title": "The cellphone Schema",
+                    "examples": [
+                      null
+                    ]
+                  },
+                  "email": {
+                    "type": "null",
+                    "default": null,
+                    "title": "The email Schema",
+                    "examples": [
+                      null
+                    ]
+                  },
+                  "country": {
+                    "type": "object",
+                    "default": {},
+                    "title": "The country Schema",
+                    "required": [
+                      "isocode",
+                      "name"
+                    ],
+                    "properties": {
+                      "isocode": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The isocode Schema",
+                        "examples": [
+                          "RU"
+                        ]
+                      },
+                      "name": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The name Schema",
+                        "examples": [
+                          "Russian Federation"
+                        ]
+                      }
+                    },
+                    "examples": [{
+                      "isocode": "RU",
+                      "name": "Russian Federation"
+                    }]
+                  },
+                  "shippingAddress": {
+                    "type": "boolean",
+                    "default": false,
+                    "title": "The shippingAddress Schema",
+                    "examples": [
+                      false
+                    ]
+                  },
+                  "billingAddress": {
+                    "type": "boolean",
+                    "default": false,
+                    "title": "The billingAddress Schema",
+                    "examples": [
+                      false
+                    ]
+                  },
+                  "defaultAddress": {
+                    "type": "boolean",
+                    "default": false,
+                    "title": "The defaultAddress Schema",
+                    "examples": [
+                      false
+                    ]
+                  },
+                  "visibleInAddressBook": {
+                    "type": "boolean",
+                    "default": false,
+                    "title": "The visibleInAddressBook Schema",
+                    "examples": [
+                      true
+                    ]
+                  },
+                  "formattedAddress": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The formattedAddress Schema",
+                    "examples": [
+                      "д. Бережки, ш. Симферопольское, 42-й км"
+                    ]
+                  },
+                  "editable": {
+                    "type": "boolean",
+                    "default": false,
+                    "title": "The editable Schema",
+                    "examples": [
+                      true
+                    ]
+                  },
+                  "streetname": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The streetname Schema",
+                    "examples": [
+                      "ш. Симферопольское, 42-й км"
+                    ]
+                  },
+                  "remarks": {
+                    "type": "null",
+                    "default": null,
+                    "title": "The remarks Schema",
+                    "examples": [
+                      null
+                    ]
+                  }
+                },
+                "examples": [{
+                  "id": "8797513941015",
+                  "title": null,
+                  "titleCode": null,
+                  "firstName": null,
+                  "lastName": null,
+                  "companyName": null,
+                  "line1": "ш. Симферопольское, 42-й км",
+                  "line2": null,
+                  "town": "д. Бережки",
+                  "region": {
+                    "isocode": "RU-MOS",
+                    "isocodeShort": null,
+                    "countryIso": "RU",
+                    "name": "Moskovskaja oblast'"
+                  },
+                  "district": null,
+                  "postalCode": "142132",
+                  "phone": null,
+                  "cellphone": null,
+                  "email": null,
+                  "country": {
+                    "isocode": "RU",
+                    "name": "Russian Federation"
+                  },
+                  "shippingAddress": false,
+                  "billingAddress": false,
+                  "defaultAddress": false,
+                  "visibleInAddressBook": true,
+                  "formattedAddress": "д. Бережки, ш. Симферопольское, 42-й км",
+                  "editable": true,
+                  "streetname": "ш. Симферопольское, 42-й км",
+                  "remarks": null
+                }]
+              },
+              "warehouseCode": {
+                "type": "string",
+                "default": "",
+                "title": "The warehouseCode Schema",
+                "examples": [
+                  "IPOS_SITE_05493_warehouse_1"
+                ]
+              },
+              "leadTime": {
+                "type": "integer",
+                "default": 0,
+                "title": "The leadTime Schema",
+                "examples": [
+                  0
+                ]
+              },
+              "inStock": {
+                "type": "boolean",
+                "default": false,
+                "title": "The inStock Schema",
+                "examples": [
+                  true
+                ]
+              },
+              "stock": {
+                "type": "integer",
+                "default": 0,
+                "title": "The stock Schema",
+                "examples": [
+                  20
+                ]
+              },
+              "storeContent": {
+                "type": "null",
+                "default": null,
+                "title": "The storeContent Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "drivingInstructions": {
+                "type": "null",
+                "default": null,
+                "title": "The drivingInstructions Schema",
+                "examples": [
+                  null
+                ]
+              }
+            },
+            "examples": [{
+              "id": "SF+0015I000005pyzDQAQ",
+              "name": "ШинСервис",
+              "address": {
+                "id": "8797513941015",
+                "title": null,
+                "titleCode": null,
+                "firstName": null,
+                "lastName": null,
+                "companyName": null,
+                "line1": "ш. Симферопольское, 42-й км",
+                "line2": null,
+                "town": "д. Бережки",
+                "region": {
+                  "isocode": "RU-MOS",
+                  "isocodeShort": null,
+                  "countryIso": "RU",
+                  "name": "Moskovskaja oblast'"
+                },
+                "district": null,
+                "postalCode": "142132",
+                "phone": null,
+                "cellphone": null,
+                "email": null,
+                "country": {
+                  "isocode": "RU",
+                  "name": "Russian Federation"
+                },
+                "shippingAddress": false,
+                "billingAddress": false,
+                "defaultAddress": false,
+                "visibleInAddressBook": true,
+                "formattedAddress": "д. Бережки, ш. Симферопольское, 42-й км",
+                "editable": true,
+                "streetname": "ш. Симферопольское, 42-й км",
+                "remarks": null
+              },
+              "warehouseCode": "IPOS_SITE_05493_warehouse_1",
+              "leadTime": 0,
+              "inStock": true,
+              "stock": 20,
+              "storeContent": null,
+              "drivingInstructions": null
+            }]
+          }
+        },
+        "examples": [{
+          "entryNumber": 0,
+          "quantity": 1,
+          "basePrice": {
+            "currencyIso": "RUB",
+            "value": 6090,
+            "priceType": "BUY",
+            "formattedValue": "6 090,00 ₽",
+            "minQuantity": null,
+            "maxQuantity": null
+          },
+          "totalPrice": {
+            "currencyIso": "RUB",
+            "value": 6090,
+            "priceType": "BUY",
+            "formattedValue": "6 090,00 ₽",
+            "minQuantity": null,
+            "maxQuantity": null
+          },
+          "product": {
+            "code": "T431455",
+            "name": "185/65 R 15 92H XL Nokian Hakka Green 3",
+            "url": "/products/p/T431455",
+            "description": null,
+            "purchasable": true,
+            "stock": {
+              "stockLevelStatus": {
+                "code": "inStock",
+                "type": "StockLevelStatus"
+              },
+              "stockLevel": 0,
+              "stockThreshold": null
+            },
+            "futureStocks": null,
+            "availableForPickup": false,
+            "averageRating": null,
+            "numberOfReviews": null,
+            "summary": null,
+            "manufacturer": "NOKIAN TYRES",
+            "variantType": null,
+            "price": null,
+            "baseProduct": "IF1381",
+            "images": [{
+              "imageType": "PRIMARY",
+              "format": "primary",
+              "url": "/medias/NOKIAN-HAKKA-GREEN-3-PICTURE-HIGH-PProductPageTyreImage-zoom-Rotated?context=bWFzdGVyfHJvb3R8MjcwODQ0fGltYWdlL3BuZ3xoNjcvaGQwLzExODUxNTY0Mzg0Mjg2LnBuZ3w3MzgwMThkMWIxYTE1NmJjOWU4MWM1ZjVjZjk2ZThjY2NiNzA1N2ZmNmU5ZjkxNWJiNGJiMWQwMWQwY2Q0MjBm",
+              "altText": "185/65 R 15 92H XL Nokian Hakka Green 3",
+              "galleryIndex": null,
+              "width": null
+            },
+              {
+                "imageType": "PRIMARY",
+                "format": "small",
+                "url": "/medias/NOKIAN-HAKKA-GREEN-3-PICTURE-HIGH-ProductCardSmall?context=bWFzdGVyfHJvb3R8MTc2NzF8aW1hZ2UvcG5nfGhhOC9oNTgvMTE4NTE1NjUxMzc5NTAucG5nfDE5MDMwODY0Y2E1M2JjMmFjZjcxNjhjOGU0YmQ2MWM5YjVjNGMwOWFkZDU5NjU0NzhiMDU4YTE3OGMwMTM3ODk",
+                "altText": "185/65 R 15 92H XL Nokian Hakka Green 3",
+                "galleryIndex": null,
+                "width": null
+              },
+              {
+                "imageType": "PRIMARY",
+                "format": "mini",
+                "url": "/medias/NOKIAN-HAKKA-GREEN-3-PICTURE-HIGH-CartTyreImage?context=bWFzdGVyfHJvb3R8MzY5NXxpbWFnZS9wbmd8aGZhL2gwNi8xMTg1MTU2MzQ5OTU1MC5wbmd8ZGJlN2NiZDE0NzBlYTk1MzVkYzdjZWI0YTgxM2E3MjIyYzIzYmM5NWRiOGI4OGUwMDYxMzJlMTIzZTJlZGYzMg",
+                "altText": "185/65 R 15 92H XL Nokian Hakka Green 3",
+                "galleryIndex": null,
+                "width": null
+              }],
+            "categories": [{
+              "code": "NT_Width_185.0",
+              "name": "185.0",
+              "url": "/Width/185-0/c/NT_Width_185.0",
+              "description": null,
+              "image": null,
+              "parentCategoryName": "Width",
+              "sequence": 185001
+            },
+              {
+                "code": "NT_Ratio_65",
+                "name": "65",
+                "url": "/Ratio/65/c/NT_Ratio_65",
+                "description": null,
+                "image": null,
+                "parentCategoryName": "Ratio",
+                "sequence": 65002
+              },
+              {
+                "code": "NT_Rim_15.0",
+                "name": "15.0",
+                "url": "/Rim/15-0/c/NT_Rim_15.0",
+                "description": null,
+                "image": null,
+                "parentCategoryName": "Rim",
+                "sequence": 15003
+              }],
+            "reviews": null,
+            "classifications": null,
+            "potentialPromotions": null,
+            "variantOptions": null,
+            "baseOptions": [{
+              "variantType": "TyreVariantProduct",
+              "options": null,
+              "selected": {
+                "code": "T431455",
+                "stock": {
+                  "stockLevelStatus": {
+                    "code": "inStock",
+                    "type": "StockLevelStatus"
+                  },
+                  "stockLevel": 0,
+                  "stockThreshold": null
+                },
+                "url": "/products/p/T431455",
+                "priceData": {
+                  "currencyIso": "RUB",
+                  "value": 5900,
+                  "priceType": "BUY",
+                  "formattedValue": "5 900,00 ₽",
+                  "minQuantity": null,
+                  "maxQuantity": null
+                },
+                "variantOptionQualifiers": [{
+                  "qualifier": "width",
+                  "name": "Ширина",
+                  "value": "185.0",
+                  "image": null
+                },
+                  {
+                    "qualifier": "ratio",
+                    "name": "Высота профиля",
+                    "value": "65",
+                    "image": null
+                  },
+                  {
+                    "qualifier": "rim",
+                    "name": "Диаметр",
+                    "value": "15.0",
+                    "image": null
+                  }]
+              }
+            }],
+            "volumePricesFlag": null,
+            "volumePrices": null,
+            "productReferences": null,
+            "variantMatrix": null,
+            "priceRange": null,
+            "firstCategoryNameList": null,
+            "multidimensional": null,
+            "configurable": false,
+            "configuratorType": null,
+            "addToCartDisabled": null,
+            "addToCartDisabledMessage": null,
+            "tags": null,
+            "keywords": null,
+            "ratingSummary": null,
+            "genders": null,
+            "shields": null,
+            "manufacturerTypeDescription": "Nokian Hakka Green 3",
+            "description2": "185/65 R 15 92H XL",
+            "marketplaceName": "185/65 R 15 92H XL Nokian Hakka Green 3",
+            "familyMasterSeasonCode": "Summer",
+            "familySalesCategorySegment3": "Car Radial summer"
+          },
+          "updateable": true,
+          "deliveryMode": null,
+          "deliveryPointOfService": null,
+          "entries": null,
+          "configurationInfos": [],
+          "statusSummaryMap": {},
+          "entryGroupNumbers": [],
+          "comments": [],
+          "supportedActions": [
+            "REMOVE"
+          ],
+          "pos": {
+            "id": "SF+0015I000005pyzDQAQ",
+            "name": "ШинСервис",
+            "address": {
+              "id": "8797513941015",
+              "title": null,
+              "titleCode": null,
+              "firstName": null,
+              "lastName": null,
+              "companyName": null,
+              "line1": "ш. Симферопольское, 42-й км",
+              "line2": null,
+              "town": "д. Бережки",
+              "region": {
+                "isocode": "RU-MOS",
+                "isocodeShort": null,
+                "countryIso": "RU",
+                "name": "Moskovskaja oblast'"
+              },
+              "district": null,
+              "postalCode": "142132",
+              "phone": null,
+              "cellphone": null,
+              "email": null,
+              "country": {
+                "isocode": "RU",
+                "name": "Russian Federation"
+              },
+              "shippingAddress": false,
+              "billingAddress": false,
+              "defaultAddress": false,
+              "visibleInAddressBook": true,
+              "formattedAddress": "д. Бережки, ш. Симферопольское, 42-й км",
+              "editable": true,
+              "streetname": "ш. Симферопольское, 42-й км",
+              "remarks": null
+            },
+            "warehouseCode": "IPOS_SITE_05493_warehouse_1",
+            "leadTime": 0,
+            "inStock": true,
+            "stock": 20,
+            "storeContent": null,
+            "drivingInstructions": null
+          }
+        }]
+      },
+      "examples": [
+        [{
+          "entryNumber": 0,
+          "quantity": 1,
+          "basePrice": {
+            "currencyIso": "RUB",
+            "value": 6090,
+            "priceType": "BUY",
+            "formattedValue": "6 090,00 ₽",
+            "minQuantity": null,
+            "maxQuantity": null
+          },
+          "totalPrice": {
+            "currencyIso": "RUB",
+            "value": 6090,
+            "priceType": "BUY",
+            "formattedValue": "6 090,00 ₽",
+            "minQuantity": null,
+            "maxQuantity": null
+          },
+          "product": {
+            "code": "T431455",
+            "name": "185/65 R 15 92H XL Nokian Hakka Green 3",
+            "url": "/products/p/T431455",
+            "description": null,
+            "purchasable": true,
+            "stock": {
+              "stockLevelStatus": {
+                "code": "inStock",
+                "type": "StockLevelStatus"
+              },
+              "stockLevel": 0,
+              "stockThreshold": null
+            },
+            "futureStocks": null,
+            "availableForPickup": false,
+            "averageRating": null,
+            "numberOfReviews": null,
+            "summary": null,
+            "manufacturer": "NOKIAN TYRES",
+            "variantType": null,
+            "price": null,
+            "baseProduct": "IF1381",
+            "images": [{
+              "imageType": "PRIMARY",
+              "format": "primary",
+              "url": "/medias/NOKIAN-HAKKA-GREEN-3-PICTURE-HIGH-PProductPageTyreImage-zoom-Rotated?context=bWFzdGVyfHJvb3R8MjcwODQ0fGltYWdlL3BuZ3xoNjcvaGQwLzExODUxNTY0Mzg0Mjg2LnBuZ3w3MzgwMThkMWIxYTE1NmJjOWU4MWM1ZjVjZjk2ZThjY2NiNzA1N2ZmNmU5ZjkxNWJiNGJiMWQwMWQwY2Q0MjBm",
+              "altText": "185/65 R 15 92H XL Nokian Hakka Green 3",
+              "galleryIndex": null,
+              "width": null
+            },
+              {
+                "imageType": "PRIMARY",
+                "format": "small",
+                "url": "/medias/NOKIAN-HAKKA-GREEN-3-PICTURE-HIGH-ProductCardSmall?context=bWFzdGVyfHJvb3R8MTc2NzF8aW1hZ2UvcG5nfGhhOC9oNTgvMTE4NTE1NjUxMzc5NTAucG5nfDE5MDMwODY0Y2E1M2JjMmFjZjcxNjhjOGU0YmQ2MWM5YjVjNGMwOWFkZDU5NjU0NzhiMDU4YTE3OGMwMTM3ODk",
+                "altText": "185/65 R 15 92H XL Nokian Hakka Green 3",
+                "galleryIndex": null,
+                "width": null
+              },
+              {
+                "imageType": "PRIMARY",
+                "format": "mini",
+                "url": "/medias/NOKIAN-HAKKA-GREEN-3-PICTURE-HIGH-CartTyreImage?context=bWFzdGVyfHJvb3R8MzY5NXxpbWFnZS9wbmd8aGZhL2gwNi8xMTg1MTU2MzQ5OTU1MC5wbmd8ZGJlN2NiZDE0NzBlYTk1MzVkYzdjZWI0YTgxM2E3MjIyYzIzYmM5NWRiOGI4OGUwMDYxMzJlMTIzZTJlZGYzMg",
+                "altText": "185/65 R 15 92H XL Nokian Hakka Green 3",
+                "galleryIndex": null,
+                "width": null
+              }],
+            "categories": [{
+              "code": "NT_Width_185.0",
+              "name": "185.0",
+              "url": "/Width/185-0/c/NT_Width_185.0",
+              "description": null,
+              "image": null,
+              "parentCategoryName": "Width",
+              "sequence": 185001
+            },
+              {
+                "code": "NT_Ratio_65",
+                "name": "65",
+                "url": "/Ratio/65/c/NT_Ratio_65",
+                "description": null,
+                "image": null,
+                "parentCategoryName": "Ratio",
+                "sequence": 65002
+              },
+              {
+                "code": "NT_Rim_15.0",
+                "name": "15.0",
+                "url": "/Rim/15-0/c/NT_Rim_15.0",
+                "description": null,
+                "image": null,
+                "parentCategoryName": "Rim",
+                "sequence": 15003
+              }],
+            "reviews": null,
+            "classifications": null,
+            "potentialPromotions": null,
+            "variantOptions": null,
+            "baseOptions": [{
+              "variantType": "TyreVariantProduct",
+              "options": null,
+              "selected": {
+                "code": "T431455",
+                "stock": {
+                  "stockLevelStatus": {
+                    "code": "inStock",
+                    "type": "StockLevelStatus"
+                  },
+                  "stockLevel": 0,
+                  "stockThreshold": null
+                },
+                "url": "/products/p/T431455",
+                "priceData": {
+                  "currencyIso": "RUB",
+                  "value": 5900,
+                  "priceType": "BUY",
+                  "formattedValue": "5 900,00 ₽",
+                  "minQuantity": null,
+                  "maxQuantity": null
+                },
+                "variantOptionQualifiers": [{
+                  "qualifier": "width",
+                  "name": "Ширина",
+                  "value": "185.0",
+                  "image": null
+                },
+                  {
+                    "qualifier": "ratio",
+                    "name": "Высота профиля",
+                    "value": "65",
+                    "image": null
+                  },
+                  {
+                    "qualifier": "rim",
+                    "name": "Диаметр",
+                    "value": "15.0",
+                    "image": null
+                  }]
+              }
+            }],
+            "volumePricesFlag": null,
+            "volumePrices": null,
+            "productReferences": null,
+            "variantMatrix": null,
+            "priceRange": null,
+            "firstCategoryNameList": null,
+            "multidimensional": null,
+            "configurable": false,
+            "configuratorType": null,
+            "addToCartDisabled": null,
+            "addToCartDisabledMessage": null,
+            "tags": null,
+            "keywords": null,
+            "ratingSummary": null,
+            "genders": null,
+            "shields": null,
+            "manufacturerTypeDescription": "Nokian Hakka Green 3",
+            "description2": "185/65 R 15 92H XL",
+            "marketplaceName": "185/65 R 15 92H XL Nokian Hakka Green 3",
+            "familyMasterSeasonCode": "Summer",
+            "familySalesCategorySegment3": "Car Radial summer"
+          },
+          "updateable": true,
+          "deliveryMode": null,
+          "deliveryPointOfService": null,
+          "entries": null,
+          "configurationInfos": [],
+          "statusSummaryMap": {},
+          "entryGroupNumbers": [],
+          "comments": [],
+          "supportedActions": [
+            "REMOVE"
+          ],
+          "pos": {
+            "id": "SF+0015I000005pyzDQAQ",
+            "name": "ШинСервис",
+            "address": {
+              "id": "8797513941015",
+              "title": null,
+              "titleCode": null,
+              "firstName": null,
+              "lastName": null,
+              "companyName": null,
+              "line1": "ш. Симферопольское, 42-й км",
+              "line2": null,
+              "town": "д. Бережки",
+              "region": {
+                "isocode": "RU-MOS",
+                "isocodeShort": null,
+                "countryIso": "RU",
+                "name": "Moskovskaja oblast'"
+              },
+              "district": null,
+              "postalCode": "142132",
+              "phone": null,
+              "cellphone": null,
+              "email": null,
+              "country": {
+                "isocode": "RU",
+                "name": "Russian Federation"
+              },
+              "shippingAddress": false,
+              "billingAddress": false,
+              "defaultAddress": false,
+              "visibleInAddressBook": true,
+              "formattedAddress": "д. Бережки, ш. Симферопольское, 42-й км",
+              "editable": true,
+              "streetname": "ш. Симферопольское, 42-й км",
+              "remarks": null
+            },
+            "warehouseCode": "IPOS_SITE_05493_warehouse_1",
+            "leadTime": 0,
+            "inStock": true,
+            "stock": 20,
+            "storeContent": null,
+            "drivingInstructions": null
+          }
+        }]
+      ]
+    },
+    "totalItems": {
+      "type": "integer",
+      "default": 0,
+      "title": "The totalItems Schema",
+      "examples": [
+        1
+      ]
+    },
+    "deliveryMode": {
+      "type": "null",
+      "default": null,
+      "title": "The deliveryMode Schema",
+      "examples": [
+        null
+      ]
+    },
+    "deliveryAddress": {
+      "type": "null",
+      "default": null,
+      "title": "The deliveryAddress Schema",
+      "examples": [
+        null
+      ]
+    },
+    "paymentInfo": {
+      "type": "null",
+      "default": null,
+      "title": "The paymentInfo Schema",
+      "examples": [
+        null
+      ]
+    },
+    "appliedOrderPromotions": {
+      "type": "array",
+      "default": [],
+      "title": "The appliedOrderPromotions Schema",
+      "items": {},
+      "examples": [
+        []
+      ]
+    },
+    "appliedProductPromotions": {
+      "type": "array",
+      "default": [],
+      "title": "The appliedProductPromotions Schema",
+      "items": {},
+      "examples": [
+        []
+      ]
+    },
+    "productDiscounts": {
+      "type": "object",
+      "default": {},
+      "title": "The productDiscounts Schema",
+      "required": [
+        "currencyIso",
+        "value",
+        "priceType",
+        "formattedValue",
+        "minQuantity",
+        "maxQuantity"
+      ],
+      "properties": {
+        "currencyIso": {
+          "type": "string",
+          "default": "",
+          "title": "The currencyIso Schema",
+          "examples": [
+            "RUB"
+          ]
+        },
+        "value": {
+          "type": "integer",
+          "default": 0,
+          "title": "The value Schema",
+          "examples": [
+            0
+          ]
+        },
+        "priceType": {
+          "type": "string",
+          "default": "",
+          "title": "The priceType Schema",
+          "examples": [
+            "BUY"
+          ]
+        },
+        "formattedValue": {
+          "type": "string",
+          "default": "",
+          "title": "The formattedValue Schema",
+          "examples": [
+            "0,00 ₽"
+          ]
+        },
+        "minQuantity": {
+          "type": "null",
+          "default": null,
+          "title": "The minQuantity Schema",
+          "examples": [
+            null
+          ]
+        },
+        "maxQuantity": {
+          "type": "null",
+          "default": null,
+          "title": "The maxQuantity Schema",
+          "examples": [
+            null
+          ]
+        }
+      },
+      "examples": [{
+        "currencyIso": "RUB",
+        "value": 0,
+        "priceType": "BUY",
+        "formattedValue": "0,00 ₽",
+        "minQuantity": null,
+        "maxQuantity": null
+      }]
+    },
+    "orderDiscounts": {
+      "type": "object",
+      "default": {},
+      "title": "The orderDiscounts Schema",
+      "required": [
+        "currencyIso",
+        "value",
+        "priceType",
+        "formattedValue",
+        "minQuantity",
+        "maxQuantity"
+      ],
+      "properties": {
+        "currencyIso": {
+          "type": "string",
+          "default": "",
+          "title": "The currencyIso Schema",
+          "examples": [
+            "RUB"
+          ]
+        },
+        "value": {
+          "type": "integer",
+          "default": 0,
+          "title": "The value Schema",
+          "examples": [
+            0
+          ]
+        },
+        "priceType": {
+          "type": "string",
+          "default": "",
+          "title": "The priceType Schema",
+          "examples": [
+            "BUY"
+          ]
+        },
+        "formattedValue": {
+          "type": "string",
+          "default": "",
+          "title": "The formattedValue Schema",
+          "examples": [
+            "0,00 ₽"
+          ]
+        },
+        "minQuantity": {
+          "type": "null",
+          "default": null,
+          "title": "The minQuantity Schema",
+          "examples": [
+            null
+          ]
+        },
+        "maxQuantity": {
+          "type": "null",
+          "default": null,
+          "title": "The maxQuantity Schema",
+          "examples": [
+            null
+          ]
+        }
+      },
+      "examples": [{
+        "currencyIso": "RUB",
+        "value": 0,
+        "priceType": "BUY",
+        "formattedValue": "0,00 ₽",
+        "minQuantity": null,
+        "maxQuantity": null
+      }]
+    },
+    "quoteDiscounts": {
+      "type": "object",
+      "default": {},
+      "title": "The quoteDiscounts Schema",
+      "required": [
+        "currencyIso",
+        "value",
+        "priceType",
+        "formattedValue",
+        "minQuantity",
+        "maxQuantity"
+      ],
+      "properties": {
+        "currencyIso": {
+          "type": "string",
+          "default": "",
+          "title": "The currencyIso Schema",
+          "examples": [
+            "RUB"
+          ]
+        },
+        "value": {
+          "type": "integer",
+          "default": 0,
+          "title": "The value Schema",
+          "examples": [
+            0
+          ]
+        },
+        "priceType": {
+          "type": "string",
+          "default": "",
+          "title": "The priceType Schema",
+          "examples": [
+            "BUY"
+          ]
+        },
+        "formattedValue": {
+          "type": "string",
+          "default": "",
+          "title": "The formattedValue Schema",
+          "examples": [
+            "0,00 ₽"
+          ]
+        },
+        "minQuantity": {
+          "type": "null",
+          "default": null,
+          "title": "The minQuantity Schema",
+          "examples": [
+            null
+          ]
+        },
+        "maxQuantity": {
+          "type": "null",
+          "default": null,
+          "title": "The maxQuantity Schema",
+          "examples": [
+            null
+          ]
+        }
+      },
+      "examples": [{
+        "currencyIso": "RUB",
+        "value": 0,
+        "priceType": "BUY",
+        "formattedValue": "0,00 ₽",
+        "minQuantity": null,
+        "maxQuantity": null
+      }]
+    },
+    "quoteDiscountsRate": {
+      "type": "integer",
+      "default": 0,
+      "title": "The quoteDiscountsRate Schema",
+      "examples": [
+        0
+      ]
+    },
+    "quoteDiscountsType": {
+      "type": "string",
+      "default": "",
+      "title": "The quoteDiscountsType Schema",
+      "examples": [
+        "PERCENT"
+      ]
+    },
+    "totalDiscounts": {
+      "type": "object",
+      "default": {},
+      "title": "The totalDiscounts Schema",
+      "required": [
+        "currencyIso",
+        "value",
+        "priceType",
+        "formattedValue",
+        "minQuantity",
+        "maxQuantity"
+      ],
+      "properties": {
+        "currencyIso": {
+          "type": "string",
+          "default": "",
+          "title": "The currencyIso Schema",
+          "examples": [
+            "RUB"
+          ]
+        },
+        "value": {
+          "type": "integer",
+          "default": 0,
+          "title": "The value Schema",
+          "examples": [
+            0
+          ]
+        },
+        "priceType": {
+          "type": "string",
+          "default": "",
+          "title": "The priceType Schema",
+          "examples": [
+            "BUY"
+          ]
+        },
+        "formattedValue": {
+          "type": "string",
+          "default": "",
+          "title": "The formattedValue Schema",
+          "examples": [
+            "0,00 ₽"
+          ]
+        },
+        "minQuantity": {
+          "type": "null",
+          "default": null,
+          "title": "The minQuantity Schema",
+          "examples": [
+            null
+          ]
+        },
+        "maxQuantity": {
+          "type": "null",
+          "default": null,
+          "title": "The maxQuantity Schema",
+          "examples": [
+            null
+          ]
+        }
+      },
+      "examples": [{
+        "currencyIso": "RUB",
+        "value": 0,
+        "priceType": "BUY",
+        "formattedValue": "0,00 ₽",
+        "minQuantity": null,
+        "maxQuantity": null
+      }]
+    },
+    "totalDiscountsWithQuoteDiscounts": {
+      "type": "object",
+      "default": {},
+      "title": "The totalDiscountsWithQuoteDiscounts Schema",
+      "required": [
+        "currencyIso",
+        "value",
+        "priceType",
+        "formattedValue",
+        "minQuantity",
+        "maxQuantity"
+      ],
+      "properties": {
+        "currencyIso": {
+          "type": "string",
+          "default": "",
+          "title": "The currencyIso Schema",
+          "examples": [
+            "RUB"
+          ]
+        },
+        "value": {
+          "type": "integer",
+          "default": 0,
+          "title": "The value Schema",
+          "examples": [
+            0
+          ]
+        },
+        "priceType": {
+          "type": "string",
+          "default": "",
+          "title": "The priceType Schema",
+          "examples": [
+            "BUY"
+          ]
+        },
+        "formattedValue": {
+          "type": "string",
+          "default": "",
+          "title": "The formattedValue Schema",
+          "examples": [
+            "0,00 ₽"
+          ]
+        },
+        "minQuantity": {
+          "type": "null",
+          "default": null,
+          "title": "The minQuantity Schema",
+          "examples": [
+            null
+          ]
+        },
+        "maxQuantity": {
+          "type": "null",
+          "default": null,
+          "title": "The maxQuantity Schema",
+          "examples": [
+            null
+          ]
+        }
+      },
+      "examples": [{
+        "currencyIso": "RUB",
+        "value": 0,
+        "priceType": "BUY",
+        "formattedValue": "0,00 ₽",
+        "minQuantity": null,
+        "maxQuantity": null
+      }]
+    },
+    "subTotalWithDiscounts": {
+      "type": "null",
+      "default": null,
+      "title": "The subTotalWithDiscounts Schema",
+      "examples": [
+        null
+      ]
+    },
+    "site": {
+      "type": "string",
+      "default": "",
+      "title": "The site Schema",
+      "examples": [
+        "ntmarketplace"
+      ]
+    },
+    "store": {
+      "type": "string",
+      "default": "",
+      "title": "The store Schema",
+      "examples": [
+        "ntmarketplace"
+      ]
+    },
+    "guid": {
+      "type": "string",
+      "default": "",
+      "title": "The guid Schema",
+      "examples": [
+        "c58d0ba1-5589-48e3-bee3-215e258876ee"
+      ]
+    },
+    "calculated": {
+      "type": "boolean",
+      "default": false,
+      "title": "The calculated Schema",
+      "examples": [
+        true
+      ]
+    },
+    "appliedVouchers": {
+      "type": "null",
+      "default": null,
+      "title": "The appliedVouchers Schema",
+      "examples": [
+        null
+      ]
+    },
+    "user": {
+      "type": "null",
+      "default": null,
+      "title": "The user Schema",
+      "examples": [
+        null
+      ]
+    },
+    "pickupOrderGroups": {
+      "type": "null",
+      "default": null,
+      "title": "The pickupOrderGroups Schema",
+      "examples": [
+        null
+      ]
+    },
+    "deliveryOrderGroups": {
+      "type": "null",
+      "default": null,
+      "title": "The deliveryOrderGroups Schema",
+      "examples": [
+        null
+      ]
+    },
+    "pickupItemsQuantity": {
+      "type": "null",
+      "default": null,
+      "title": "The pickupItemsQuantity Schema",
+      "examples": [
+        null
+      ]
+    },
+    "deliveryItemsQuantity": {
+      "type": "null",
+      "default": null,
+      "title": "The deliveryItemsQuantity Schema",
+      "examples": [
+        null
+      ]
+    },
+    "totalUnitCount": {
+      "type": "integer",
+      "default": 0,
+      "title": "The totalUnitCount Schema",
+      "examples": [
+        1
+      ]
+    },
+    "comments": {
+      "type": "null",
+      "default": null,
+      "title": "The comments Schema",
+      "examples": [
+        null
+      ]
+    },
+    "rootGroups": {
+      "type": "null",
+      "default": null,
+      "title": "The rootGroups Schema",
+      "examples": [
+        null
+      ]
+    },
+    "potentialOrderPromotions": {
+      "type": "array",
+      "default": [],
+      "title": "The potentialOrderPromotions Schema",
+      "items": {},
+      "examples": [
+        []
+      ]
+    },
+    "potentialProductPromotions": {
+      "type": "array",
+      "default": [],
+      "title": "The potentialProductPromotions Schema",
+      "items": {},
+      "examples": [
+        []
+      ]
+    },
+    "saveTime": {
+      "type": "null",
+      "default": null,
+      "title": "The saveTime Schema",
+      "examples": [
+        null
+      ]
+    },
+    "savedBy": {
+      "type": "null",
+      "default": null,
+      "title": "The savedBy Schema",
+      "examples": [
+        null
+      ]
+    },
+    "quoteData": {
+      "type": "null",
+      "default": null,
+      "title": "The quoteData Schema",
+      "examples": [
+        null
+      ]
+    },
+    "importStatus": {
+      "type": "null",
+      "default": null,
+      "title": "The importStatus Schema",
+      "examples": [
+        null
+      ]
+    },
+    "costCenter": {
+      "type": "null",
+      "default": null,
+      "title": "The costCenter Schema",
+      "examples": [
+        null
+      ]
+    },
+    "paymentType": {
+      "type": "null",
+      "default": null,
+      "title": "The paymentType Schema",
+      "examples": [
+        null
+      ]
+    },
+    "purchaseOrderNumber": {
+      "type": "null",
+      "default": null,
+      "title": "The purchaseOrderNumber Schema",
+      "examples": [
+        null
+      ]
+    },
+    "b2BComment": {
+      "type": "null",
+      "default": null,
+      "title": "The b2BComment Schema",
+      "examples": [
+        null
+      ]
+    },
+    "b2bCustomerData": {
+      "type": "null",
+      "default": null,
+      "title": "The b2bCustomerData Schema",
+      "examples": [
+        null
+      ]
+    },
+    "quoteAllowed": {
+      "type": "null",
+      "default": null,
+      "title": "The quoteAllowed Schema",
+      "examples": [
+        null
+      ]
+    }
+  },
+  "examples": [{
+    "code": "00128000",
+    "name": null,
+    "description": null,
+    "expirationTime": null,
+    "net": false,
+    "totalPriceWithTax": {
+      "currencyIso": "RUB",
+      "value": 6090,
+      "priceType": "BUY",
+      "formattedValue": "6 090,00 ₽",
+      "minQuantity": null,
+      "maxQuantity": null
+    },
+    "totalPrice": {
+      "currencyIso": "RUB",
+      "value": 6090,
+      "priceType": "BUY",
+      "formattedValue": "6 090,00 ₽",
+      "minQuantity": null,
+      "maxQuantity": null
+    },
+    "totalTax": {
+      "currencyIso": "RUB",
+      "value": 0,
+      "priceType": "BUY",
+      "formattedValue": "0,00 ₽",
+      "minQuantity": null,
+      "maxQuantity": null
+    },
+    "subTotal": {
+      "currencyIso": "RUB",
+      "value": 6090,
+      "priceType": "BUY",
+      "formattedValue": "6 090,00 ₽",
+      "minQuantity": null,
+      "maxQuantity": null
+    },
+    "subTotalWithoutQuoteDiscounts": {
+      "currencyIso": "RUB",
+      "value": 6090,
+      "priceType": "BUY",
+      "formattedValue": "6 090,00 ₽",
+      "minQuantity": null,
+      "maxQuantity": null
+    },
+    "deliveryCost": null,
+    "entries": [{
+      "entryNumber": 0,
+      "quantity": 1,
+      "basePrice": {
+        "currencyIso": "RUB",
+        "value": 6090,
+        "priceType": "BUY",
+        "formattedValue": "6 090,00 ₽",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "totalPrice": {
+        "currencyIso": "RUB",
+        "value": 6090,
+        "priceType": "BUY",
+        "formattedValue": "6 090,00 ₽",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "product": {
+        "code": "T431455",
+        "name": "185/65 R 15 92H XL Nokian Hakka Green 3",
+        "url": "/products/p/T431455",
+        "description": null,
+        "purchasable": true,
+        "stock": {
+          "stockLevelStatus": {
+            "code": "inStock",
+            "type": "StockLevelStatus"
+          },
+          "stockLevel": 0,
+          "stockThreshold": null
+        },
+        "futureStocks": null,
+        "availableForPickup": false,
+        "averageRating": null,
+        "numberOfReviews": null,
+        "summary": null,
+        "manufacturer": "NOKIAN TYRES",
+        "variantType": null,
+        "price": null,
+        "baseProduct": "IF1381",
+        "images": [{
+          "imageType": "PRIMARY",
+          "format": "primary",
+          "url": "/medias/NOKIAN-HAKKA-GREEN-3-PICTURE-HIGH-PProductPageTyreImage-zoom-Rotated?context=bWFzdGVyfHJvb3R8MjcwODQ0fGltYWdlL3BuZ3xoNjcvaGQwLzExODUxNTY0Mzg0Mjg2LnBuZ3w3MzgwMThkMWIxYTE1NmJjOWU4MWM1ZjVjZjk2ZThjY2NiNzA1N2ZmNmU5ZjkxNWJiNGJiMWQwMWQwY2Q0MjBm",
+          "altText": "185/65 R 15 92H XL Nokian Hakka Green 3",
+          "galleryIndex": null,
+          "width": null
+        },
+          {
+            "imageType": "PRIMARY",
+            "format": "small",
+            "url": "/medias/NOKIAN-HAKKA-GREEN-3-PICTURE-HIGH-ProductCardSmall?context=bWFzdGVyfHJvb3R8MTc2NzF8aW1hZ2UvcG5nfGhhOC9oNTgvMTE4NTE1NjUxMzc5NTAucG5nfDE5MDMwODY0Y2E1M2JjMmFjZjcxNjhjOGU0YmQ2MWM5YjVjNGMwOWFkZDU5NjU0NzhiMDU4YTE3OGMwMTM3ODk",
+            "altText": "185/65 R 15 92H XL Nokian Hakka Green 3",
+            "galleryIndex": null,
+            "width": null
+          },
+          {
+            "imageType": "PRIMARY",
+            "format": "mini",
+            "url": "/medias/NOKIAN-HAKKA-GREEN-3-PICTURE-HIGH-CartTyreImage?context=bWFzdGVyfHJvb3R8MzY5NXxpbWFnZS9wbmd8aGZhL2gwNi8xMTg1MTU2MzQ5OTU1MC5wbmd8ZGJlN2NiZDE0NzBlYTk1MzVkYzdjZWI0YTgxM2E3MjIyYzIzYmM5NWRiOGI4OGUwMDYxMzJlMTIzZTJlZGYzMg",
+            "altText": "185/65 R 15 92H XL Nokian Hakka Green 3",
+            "galleryIndex": null,
+            "width": null
+          }],
+        "categories": [{
+          "code": "NT_Width_185.0",
+          "name": "185.0",
+          "url": "/Width/185-0/c/NT_Width_185.0",
+          "description": null,
+          "image": null,
+          "parentCategoryName": "Width",
+          "sequence": 185001
+        },
+          {
+            "code": "NT_Ratio_65",
+            "name": "65",
+            "url": "/Ratio/65/c/NT_Ratio_65",
+            "description": null,
+            "image": null,
+            "parentCategoryName": "Ratio",
+            "sequence": 65002
+          },
+          {
+            "code": "NT_Rim_15.0",
+            "name": "15.0",
+            "url": "/Rim/15-0/c/NT_Rim_15.0",
+            "description": null,
+            "image": null,
+            "parentCategoryName": "Rim",
+            "sequence": 15003
+          }],
+        "reviews": null,
+        "classifications": null,
+        "potentialPromotions": null,
+        "variantOptions": null,
+        "baseOptions": [{
+          "variantType": "TyreVariantProduct",
+          "options": null,
+          "selected": {
+            "code": "T431455",
+            "stock": {
+              "stockLevelStatus": {
+                "code": "inStock",
+                "type": "StockLevelStatus"
+              },
+              "stockLevel": 0,
+              "stockThreshold": null
+            },
+            "url": "/products/p/T431455",
+            "priceData": {
+              "currencyIso": "RUB",
+              "value": 5900,
+              "priceType": "BUY",
+              "formattedValue": "5 900,00 ₽",
+              "minQuantity": null,
+              "maxQuantity": null
+            },
+            "variantOptionQualifiers": [{
+              "qualifier": "width",
+              "name": "Ширина",
+              "value": "185.0",
+              "image": null
+            },
+              {
+                "qualifier": "ratio",
+                "name": "Высота профиля",
+                "value": "65",
+                "image": null
+              },
+              {
+                "qualifier": "rim",
+                "name": "Диаметр",
+                "value": "15.0",
+                "image": null
+              }]
+          }
+        }],
+        "volumePricesFlag": null,
+        "volumePrices": null,
+        "productReferences": null,
+        "variantMatrix": null,
+        "priceRange": null,
+        "firstCategoryNameList": null,
+        "multidimensional": null,
+        "configurable": false,
+        "configuratorType": null,
+        "addToCartDisabled": null,
+        "addToCartDisabledMessage": null,
+        "tags": null,
+        "keywords": null,
+        "ratingSummary": null,
+        "genders": null,
+        "shields": null,
+        "manufacturerTypeDescription": "Nokian Hakka Green 3",
+        "description2": "185/65 R 15 92H XL",
+        "marketplaceName": "185/65 R 15 92H XL Nokian Hakka Green 3",
+        "familyMasterSeasonCode": "Summer",
+        "familySalesCategorySegment3": "Car Radial summer"
+      },
+      "updateable": true,
+      "deliveryMode": null,
+      "deliveryPointOfService": null,
+      "entries": null,
+      "configurationInfos": [],
+      "statusSummaryMap": {},
+      "entryGroupNumbers": [],
+      "comments": [],
+      "supportedActions": [
+        "REMOVE"
+      ],
+      "pos": {
+        "id": "SF+0015I000005pyzDQAQ",
+        "name": "ШинСервис",
+        "address": {
+          "id": "8797513941015",
+          "title": null,
+          "titleCode": null,
+          "firstName": null,
+          "lastName": null,
+          "companyName": null,
+          "line1": "ш. Симферопольское, 42-й км",
+          "line2": null,
+          "town": "д. Бережки",
+          "region": {
+            "isocode": "RU-MOS",
+            "isocodeShort": null,
+            "countryIso": "RU",
+            "name": "Moskovskaja oblast'"
+          },
+          "district": null,
+          "postalCode": "142132",
+          "phone": null,
+          "cellphone": null,
+          "email": null,
+          "country": {
+            "isocode": "RU",
+            "name": "Russian Federation"
+          },
+          "shippingAddress": false,
+          "billingAddress": false,
+          "defaultAddress": false,
+          "visibleInAddressBook": true,
+          "formattedAddress": "д. Бережки, ш. Симферопольское, 42-й км",
+          "editable": true,
+          "streetname": "ш. Симферопольское, 42-й км",
+          "remarks": null
+        },
+        "warehouseCode": "IPOS_SITE_05493_warehouse_1",
+        "leadTime": 0,
+        "inStock": true,
+        "stock": 20,
+        "storeContent": null,
+        "drivingInstructions": null
+      }
+    }],
+    "totalItems": 1,
+    "deliveryMode": null,
+    "deliveryAddress": null,
+    "paymentInfo": null,
+    "appliedOrderPromotions": [],
+    "appliedProductPromotions": [],
+    "productDiscounts": {
+      "currencyIso": "RUB",
+      "value": 0,
+      "priceType": "BUY",
+      "formattedValue": "0,00 ₽",
+      "minQuantity": null,
+      "maxQuantity": null
+    },
+    "orderDiscounts": {
+      "currencyIso": "RUB",
+      "value": 0,
+      "priceType": "BUY",
+      "formattedValue": "0,00 ₽",
+      "minQuantity": null,
+      "maxQuantity": null
+    },
+    "quoteDiscounts": {
+      "currencyIso": "RUB",
+      "value": 0,
+      "priceType": "BUY",
+      "formattedValue": "0,00 ₽",
+      "minQuantity": null,
+      "maxQuantity": null
+    },
+    "quoteDiscountsRate": 0,
+    "quoteDiscountsType": "PERCENT",
+    "totalDiscounts": {
+      "currencyIso": "RUB",
+      "value": 0,
+      "priceType": "BUY",
+      "formattedValue": "0,00 ₽",
+      "minQuantity": null,
+      "maxQuantity": null
+    },
+    "totalDiscountsWithQuoteDiscounts": {
+      "currencyIso": "RUB",
+      "value": 0,
+      "priceType": "BUY",
+      "formattedValue": "0,00 ₽",
+      "minQuantity": null,
+      "maxQuantity": null
+    },
+    "subTotalWithDiscounts": null,
+    "site": "ntmarketplace",
+    "store": "ntmarketplace",
+    "guid": "c58d0ba1-5589-48e3-bee3-215e258876ee",
+    "calculated": true,
+    "appliedVouchers": null,
+    "user": null,
+    "pickupOrderGroups": null,
+    "deliveryOrderGroups": null,
+    "pickupItemsQuantity": null,
+    "deliveryItemsQuantity": null,
+    "totalUnitCount": 1,
+    "comments": null,
+    "rootGroups": null,
+    "potentialOrderPromotions": [],
+    "potentialProductPromotions": [],
+    "saveTime": null,
+    "savedBy": null,
+    "quoteData": null,
+    "importStatus": null,
+    "costCenter": null,
+    "paymentType": null,
+    "purchaseOrderNumber": null,
+    "b2BComment": null,
+    "b2bCustomerData": null,
+    "quoteAllowed": null
+  }]
+}
