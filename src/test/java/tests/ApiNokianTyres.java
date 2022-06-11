@@ -19,8 +19,9 @@ public class ApiNokianTyres {
     BodyRequestConfig br = new BodyRequestConfig();
 
     @Test
-    @DisplayName("Добавление товара в корзину")
+    @DisplayName("Пользовательский сценарий: Добавление товара в корзину, удаление товара из корзины")
     void addToCard() throws FileNotFoundException {
+        step("Добаление товара в корзину");
         Response response = given()
                 .spec(requestSpec)
                 .body(br.getBodyRequest())
@@ -36,12 +37,9 @@ public class ApiNokianTyres {
 
         assertThat(count).isEqualTo(br.getBodyRequest().getQuantity());
         assertThat(product).isEqualTo(br.getBodyRequest().getProductCode());
-    }
 
-    @Test
-    @DisplayName("Проверяем, что товар в корзине")
-    void checkProductToCard() throws FileNotFoundException {
-        Response getMini = given()
+        step("Проверка товара в корзине");
+        given()
                 .spec(requestSpec)
                 .queryParam("qty", "0")
                 .when()
@@ -52,27 +50,20 @@ public class ApiNokianTyres {
                 .log().body()
                 .body("entries[0].quantity", is(br.getBodyRequest().getQuantity()))
                 .extract().response();
-    }
 
-    @Test
-    @DisplayName("Удаление товара из корзины")
-    void deleteProductMini() {
-        Response response = given()
+        step("Удаление товара из корзины");
+        given()
                 .spec(requestSpec)
                 .param("qty", "0")
                 .when()
                 .post("api/cart/update/0")
                 .then()
                 .spec(response200)
-                .body(matchesJsonSchemaInClasspath("schemes/miniResponse.json"))
                 .extract()
                 .response();
-    }
 
-    @Test
-    @DisplayName("Проверка, что корзина пуста и товар удален")
-    void subscribeFullTest2() {
-        Response getMini = given()
+        step("Проверка, что корзина пуста и товар удален");
+        given()
                 .spec(requestSpec)
                 .queryParam("qty", "0")
                 .when()
@@ -80,6 +71,7 @@ public class ApiNokianTyres {
                 .get("/api/cart/mini")
                 .then()
                 .spec(response200)
+                .log().body()
                 .body(matchesJsonSchemaInClasspath("schemes/miniResponse.json"))
                 .body("entries.size()", is(0))
                 .extract().response();
