@@ -10,7 +10,7 @@ import static io.restassured.RestAssured.with;
 import static listeners.CustomAllureListener.withCustomTemplates;
 
 public class Specs {
-    private static String cookie = "ntmarketplace-cart=c58d0ba1-5589-48e3-bee3-215e258876ee; JSESSIONID=27D786912EB3B84F2F50F9380A4B7C2B;";
+        private static String cookie = "ntmarketplace-cart=c58d0ba1-5589-48e3-bee3-215e258876ee; JSESSIONID=27D786912EB3B84F2F50F9380A4B7C2B;";
     public static RequestSpecification requestSpec =
             with()
                     .filter(withCustomTemplates())

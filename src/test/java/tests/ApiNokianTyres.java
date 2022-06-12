@@ -6,8 +6,6 @@ import io.restassured.response.Response;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.io.FileNotFoundException;
-
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.*;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
@@ -20,63 +18,70 @@ public class ApiNokianTyres {
 
     @Test
     @DisplayName("Пользовательский сценарий: Добавление товара в корзину, удаление товара из корзины")
-    void addToCard() throws FileNotFoundException {
-        step("Добаление товара в корзину");
-        Response response = given()
-                .spec(requestSpec)
-                .body(br.getBodyRequest())
-                .when()
-                .log().uri()
-                .log().all()
-                .post("/api/cart/add")
-                .then()
-                .spec(response200)
-                .extract().response();
+    void addToCard() {
+        step("Добаление товара в корзину", () -> {
+            Response response = given()
+                    .spec(requestSpec)
+                    .body(br.getBodyRequest())
+                    .when()
+                    .log().uri()
+                    .log().all()
+                    .post("/api/cart/add")
+                    .then()
+                    .spec(response200)
+                    .extract().response();
 
-        String product = response.path("entry.product.code");
-        int count = response.path("quantity");
+            String product = response.path("entry.product.code");
+            int count = response.path("quantity");
 
-        assertThat(count).isEqualTo(br.getBodyRequest().getQuantity());
-        assertThat(product).isEqualTo(br.getBodyRequest().getProductCode());
+            assertThat(count).isEqualTo(br.getBodyRequest().getQuantity());
+            assertThat(product).isEqualTo(br.getBodyRequest().getProductCode());
 
-        step("Проверка товара в корзине");
-        given()
-                .spec(requestSpec)
-                .queryParam("qty", "0")
-                .when()
-                .log().uri()
-                .log().all()
-                .get("/api/cart/mini")
-                .then()
-                .spec(response200)
+        });
+
+        step("Проверка товара в корзине", () -> {
+            given()
+                    .spec(requestSpec)
+                    .queryParam("qty", "0")
+                    .when()
+                    .log().uri()
+                    .log().all()
+                    .get("/api/cart/mini")
+                    .then()
+                    .spec(response200)
 //                .log().body()
-                .body("entries[0].quantity", is(br.getBodyRequest().getQuantity()))
-                .extract().response();
+                    .body("entries[0].quantity", is(br.getBodyRequest().getQuantity()))
+                    .extract().response();
+        });
 
-        step("Удаление товара из корзины");
-        given()
-                .spec(requestSpec)
-                .param("qty", "0")
-                .when()
-                .post("api/cart/update/0")
-                .then()
-                .spec(response200)
-                .extract()
-                .response();
 
-        step("Проверка, что корзина пуста и товар удален");
-        given()
-                .spec(requestSpec)
-                .queryParam("qty", "0")
-                .when()
-                .log().uri()
-                .get("/api/cart/mini")
-                .then()
-                .spec(response200)
-                .log().body()
-                .body(matchesJsonSchemaInClasspath("schemes/miniResponse.json"))
-                .body("entries.size()", is(0))
-                .extract().response();
+        step("Удаление товара из корзины", () -> {
+            given()
+                    .spec(requestSpec)
+                    .param("qty", "0")
+                    .when()
+                    .post("api/cart/update/0")
+                    .then()
+                    .spec(response200)
+                    .extract()
+                    .response();
+        });
+
+        step("Проверка, что корзина пуста и товар удален", () -> {
+            given()
+                    .spec(requestSpec)
+                    .queryParam("qty", "0")
+                    .when()
+                    .log().uri()
+                    .get("/api/cart/mini")
+                    .then()
+                    .spec(response200)
+                    .log().body()
+                    .body(matchesJsonSchemaInClasspath("schemes/miniResponse.json"))
+                    .body("entries.size()", is(0))
+                    .extract().response();
+        });
+
     }
 
     @Test
@@ -114,7 +119,6 @@ public class ApiNokianTyres {
 
         int results = response.path("pagination.totalNumberOfResults");
 
-        step("Проверяем, что есть результаты");
         assertThat(results).isNotEqualTo(0);
     }
 }
