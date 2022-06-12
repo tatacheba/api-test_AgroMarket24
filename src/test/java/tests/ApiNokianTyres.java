@@ -25,9 +25,10 @@ public class ApiNokianTyres {
                     .body(br.getBodyRequest())
                     .when()
                     .log().uri()
-                    .log().all()
+//                    .log().all()
                     .post("/api/cart/add")
                     .then()
+                    .log().all()
                     .spec(response200)
                     .extract().response();
 
@@ -94,6 +95,7 @@ public class ApiNokianTyres {
                 .log().all()
                 .get("/api/search")
                 .then()
+                .log().all()
                 .spec(response200)
                 .extract().response();
 
@@ -113,6 +115,7 @@ public class ApiNokianTyres {
                 .log().all()
                 .get("/api/search")
                 .then()
+                .log().all()
                 .spec(response200)
                 .extract()
                 .response();
