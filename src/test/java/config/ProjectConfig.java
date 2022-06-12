@@ -4,8 +4,7 @@ import org.aeonbits.owner.Config;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
-        "classpath:config/credentials.properties",
-        "classpath:config/remote.propert"
+        "classpath:config/credentials.properties"
 })
 public interface ProjectConfig extends Config {
     //Selenoid property
