@@ -1,4 +1,4 @@
-# Проект по автоматизации тестирования для сайта Nokian tyres
+# Проект по автоматизации API-тестирования для сайта Nokian tyres
 #####  :arrow_right: Сайт [NOKIAN TYRES][id] :arrow_left:
 [id]: https://www.nokiantyres.ru/
 
