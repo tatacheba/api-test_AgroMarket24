@@ -12,7 +12,7 @@ public class BodyRequestConfig {
 
     public BodyRequest getBodyRequest() throws FileNotFoundException {
         Gson gsonFile = new Gson();
-        return gsonFile.fromJson(new FileReader(new File("src/test/resources/bodyRequest.json")), BodyRequest.class);
+        return gsonFile.fromJson(new FileReader(new File("src/test/resources/dataJson/bodyRequest.json")), BodyRequest.class);
     }
 
     public void setBodyRequest(File bodyRequest) {

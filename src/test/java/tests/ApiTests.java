@@ -13,19 +13,18 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.*;
 import static specs.Specs.*;
 
-public class ApiNokianTyres {
+public class ApiTests {
     BodyRequestConfig br = new BodyRequestConfig();
 
     @Test
     @DisplayName("Пользовательский сценарий: Добавление товара в корзину, удаление товара из корзины")
-    void addToCard() {
+    void userTestAddToCardAndDeleteToCard() {
         step("Добаление товара в корзину", () -> {
             Response response = given()
                     .spec(requestSpec)
                     .body(br.getBodyRequest())
                     .when()
                     .log().uri()
-//                    .log().all()
                     .post("/api/cart/add/")
                     .then()
                     .log().all()
@@ -50,11 +49,9 @@ public class ApiNokianTyres {
                     .get("/api/cart/mini/")
                     .then()
                     .spec(response200)
-//                .log().body()
                     .body("entries[0].quantity", is(br.getBodyRequest().getQuantity()))
                     .extract().response();
         });
-
 
         step("Удаление товара из корзины", () -> {
             given()
@@ -78,7 +75,7 @@ public class ApiNokianTyres {
                     .then()
                     .spec(response200)
                     .log().body()
-                    .body(matchesJsonSchemaInClasspath("schemes/miniResponse.json"))
+                    .body(matchesJsonSchemaInClasspath("schemes/miniResponseDeleteToCard.json"))
                     .body("entries.size()", is(0))
                     .extract().response();
         });
@@ -102,7 +99,7 @@ public class ApiNokianTyres {
         int results = response.path("pagination.totalNumberOfResults");
 
         step("Проверяем, что есть результаты");
-        assertThat(results).isNotNull();
+        assertThat(results).isGreaterThan(0);
     }
 
     @Test
@@ -110,7 +107,12 @@ public class ApiNokianTyres {
     void searchTyresLifeTimeGuarantee() {
         Response response = given()
                 .spec(requestSpecForSearch)
-                .queryParam("q", ":stockAvailabilityPOS:SF+0015I000007JwowQAC:stockAvailabilityPOS:SF+0015I000005pyzDQAQ:productGuarantee:lifeTimeGuarantee")
+                .queryParam("q",
+                        ":stockAvailabilityPOS:SF+0015I000007JwowQAC" +
+                                ":stockAvailabilityPOS" +
+                                ":SF+0015I000005pyzDQAQ" +
+                                ":productGuarantee" +
+                                ":lifeTimeGuarantee")
                 .when()
                 .log().all()
                 .get("/api/search/")
