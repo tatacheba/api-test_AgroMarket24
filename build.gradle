@@ -16,7 +16,6 @@ def restAssuredVersion = "5.0.1",
     slf4jVersion = "1.7.36"
 
 dependencies {
-    implementation 'junit:junit:4.13.1'
     testImplementation(
             "com.codeborne:selenide:$selenide",
             "io.rest-assured:spring-mock-mvc:3.0.0",
