@@ -87,7 +87,8 @@ public class ApiTests {
     void searchToParamTypes() {
         Response response = given()
                 .spec(requestSpecForSearch)
-                .queryParam("q", ":rim_facet:14:width_facet:165:ratio_facet:65")
+                .queryParam("q",
+                        ":rim_facet:14:width_facet:165:ratio_facet:65")
                 .when()
                 .log().all()
                 .get("/api/search/")
