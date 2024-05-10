@@ -1,26 +1,26 @@
-# Проект по автоматизации API-тестирования для сайта Nokian tyres
+# API-testing project for Nokian tyres
 
-# :arrow_right: Сайт [NOKIAN TYRES][id] :arrow_left:
+# :arrow_right: [NOKIAN TYRES][id] :arrow_left:
 
 [id]: https://www.nokiantyres.ru/
 
-## :page_with_curl:    Содержание
+## :page_with_curl: Contents
 
-> :heavy_check_mark: [Технологии и инструменты](#technologist-технологии-и-инструменты)
+> :heavy_check_mark: [Technologies and tools](#technologist)
 >
-> :heavy_check_mark: [Реализованные проверки](#bookmark_tabs-реализованные-проверки)
+> :heavy_check_mark: [Verified checks](#verified)
 >
-> :heavy_check_mark: [Запуск тестов из терминала](#computer-Запуск-тестов-из-терминала)
+> :heavy_check_mark: [Run tests from the terminal](#computer)
 >
-> :heavy_check_mark: [Запуск тестов в Jenkins](#-запуск-тестов-в-jenkins)
+> :heavy_check_mark: [Running Tests in Jenkins](#running_tests)
 >
-> :heavy_check_mark: [Отчет о результатах тестирования в Allure Report](#-отчет-в-allure-report)
+> :heavy_check_mark: [Report on test results in Allure Report](#report_allure_report)
 >
-> :heavy_check_mark: [Интеграция с Allure TestOps](#-Интеграция-с-Allure-TestOps)
+> :heavy_check_mark: [Integration with Allure TestOps](#integration_allure_testops)
 >
-> :heavy_check_mark: [Уведомления в Telegram с использованием бота](#-уведомления-в-telegram-с-использованием-бота)
+> :heavy_check_mark: [Notifications in Telegram using a bot](#notifications_telegram_bot)
 
-## :technologist: Технологии и инструменты
+## <a name="technologist"> Technologies and tools</a>
 
 <p align="center">
 <a href="https://www.jetbrains.com/idea/"><img src="images/logo/Intelij_IDEA.svg" width="50" height="50"  alt="IDEA"/></a>
@@ -35,25 +35,25 @@
 <a href="https://telegram.org/"><img src="images/logo/Telegram.svg" width="auto" height="50"  alt="Telegram"/></a>
 </p>
 
-## :bookmark_tabs: Реализованные проверки
+## <a name="verified">Verified checks</a>
 
-* ✓ Поиск шин по параметрам ширина/профиль/диаметр.
-* ✓ Поиск шин по наличию 'Бессрочной гарантии'".
-* Пользовательский сценарий: 
-    * ✓ Добавление товара в корзину.
-    * ✓ Проверка товара в корзине.
-    * ✓ Удаление товара из корзины.
-    * ✓ Проверка, что корзина пуста и товар удален.
+-   ✓ Search tyres by width/profile/diameter parameters.
+-   ✓ Retrieval of tyres under the 'Indefinite Guarantee'".
+-   Custom Script:
+    -   ✓ Add product to cart.
+    -   ✓ Check the shopping cart.
+    -   ✓ Removing the product from the cart.
+    -   ✓ Check that the cart is empty and the goods have been removed.
 
-## :computer: Запуск тестов из терминала
+## <a name="computer">Run tests from the terminal</a>
 
-Локальный запуск:
+Local start:
 
 ```bash
 gradle clean test
 ```
 
-## <img width="4%" title="Jenkins" src="images/logo/Jenkins.svg"> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/tatacheba_qaguru_11_for_interview)
+## <img width="4%" title="Jenkins" src="images/Jenkins.svg"><a name="running_tests">Running Tests in [Jenkins](https://jenkins.autotests.cloud/job/tatacheba_qaguru_11_for_interview)</a>
 
 <p align="center">
   <img src="images/screenshots/JenkinsProject.jpeg" alt="job" width="800">
@@ -61,26 +61,25 @@ gradle clean test
 
 ## <img src="images/logo/Allure_Report.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/tatacheba_qaguru_11_for_interview/allure">Allure report</a>
 
-### Основное окно
+### Main
 
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screenshots/allure_main.jpeg">
 </p>
 
-### Тесты
+### Tests
 
 <p align="center">
 <img title="Allure Tests" src="images/screenshots/allure_tests.jpeg">
 </p>
 
-### Графики
+### Graphics
 
 <p align="center">
 <img title="Allure Graphics" src="images/screenshots/allure_graphics.jpeg">
 </p>
 
-
-## <img src="images/logo/Allure_EE.svg" width="25" height="25" /> Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/1199/)
+## <img src="images/Allure_EE.svg" width="25" height="25" /> <a name="integration_allure_testops">Integration with [Allure TestOps](https://allure.autotests.cloud/project/1199/)</a>
 
 ### Test cases
 
@@ -88,12 +87,8 @@ gradle clean test
 <img title="TestOps Test cases" src="images/screenshots/Test cases.jpeg">
 </p>
 
-
-## <img src="images/logo/Telegram.svg" width="25" height="25"/> Уведомления в Telegram с использованием бота
+## <img src="images/Telegram.svg" width="25" height="25"/> <a name="notifications_telegram_bot">Notifications in Telegram using a bot</a>
 
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screenshots/allure_telegram.jpeg">
 </p>
-
-
-
